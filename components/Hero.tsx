@@ -3,14 +3,15 @@ import React from 'react';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import BackgroundCircles from './BackgroundCircles';
 
+
 type Props = {};
 
 function Hero({}: Props) {
 	const [text, count] = useTypewriter({
 		words: [
 			"Hi! My Name's Patrick",
-			'I love film photography',
-			'And world of warcraft lmao',
+			"I like to build things",
+			'And take film photographs',
 		],
 		loop: true,
 		delaySpeed: 2000,
@@ -20,7 +21,7 @@ function Hero({}: Props) {
 			<BackgroundCircles />
       <img 
         className="relative rounded-full h-32 w-32 mx-auto object-cover"
-        src="https://cdn.quasar.dev/img/avatar1.jpg" alt="avatar photo" />
+        src="https://wageup-media.s3.amazonaws.com/profile.JPG" />
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">Software Engineer</h2>
         
