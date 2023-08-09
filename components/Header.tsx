@@ -39,7 +39,8 @@ function Header() {
 					bgColor="transparent"
 				/>
 			</motion.div>
-			<Link href="#contact">
+			<Link href="#contact" legacyBehavior>
+			
 			<motion.div
 				initial={{
 					x: 500,
@@ -70,6 +71,7 @@ function Header() {
 					</p>
 	
 			</motion.div>
+			
 			</Link>
 		</header>
 	);

@@ -18,13 +18,13 @@ function WorkExperience({}: Props) {
 				Experience
 			</h3>
 			<div
-				className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory 
+				className="w-full  flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory 
       scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80"
 		
 			>
 				<article
 					className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0
-    w-[500px] md:w-[600px] xl:-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 
+    w-screen md:w-[600px] xl:-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 
 		opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden"
 				>
 					<motion.img

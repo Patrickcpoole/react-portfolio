@@ -62,12 +62,15 @@ const Home = () => {
       <section id="contact" className='snap-start'>
         <Contact />
       </section>
-      <Link href="#hero">
+      <Link href="#hero" legacyBehavior>
+        
       <footer className='sticky bottom-5 w-full cursor-pointer'>
         <div className='flex items-center justify-center'>
         <ArrowUpCircleIcon className="h-6 w-6 text-yellow-500"/>
         </div>
+       
       </footer>
+     
       </Link>
 
     </div>
