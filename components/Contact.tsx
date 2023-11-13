@@ -30,15 +30,15 @@ function Contact({}: Props) {
 				
 				<div className="space-y-10">
 					<div className="flex items-center space-x-5 justify-center">
-						<PhoneIcon className="text-[#F7Ab0A] h-7 w-7 animate-pulse" />
+						<PhoneIcon className="text-[#169137] h-7 w-7 animate-pulse" />
 						<p>+303-888-8909</p>
 					</div>
           <div className="flex items-center space-x-5 justify-center">
-						<MapPinIcon className="text-[#F7Ab0A] h-7 w-7 animate-pulse" />
+						<MapPinIcon className="text-[#169137] h-7 w-7 animate-pulse" />
 						<p>Denver, CO</p>
 					</div>
           <div className="flex items-center space-x-5 justify-center">
-						<EnvelopeIcon className="text-[#F7Ab0A] h-7 w-7 animate-pulse" />
+						<EnvelopeIcon className="text-[#169137] h-7 w-7 animate-pulse" />
 						<p>patrickcpoole@gmail.com</p>
 					</div>
           
@@ -51,7 +51,7 @@ function Contact({}: Props) {
           </div>
             <input {...register('subject')} placeholder="Subject" className="contactInput" type="text" />
             <textarea {...register('message')} placeholder="Message" className="contactInput"></textarea>
-            <button type="submit" className="bg-[#F7Ab0A] py-5 px-10 rounded-md text-black font-bold text-lg">Submit</button>
+            <button type="submit" className="bg-[#169137] py-5 px-10 rounded-md text-white font-bold text-lg">Submit</button>
         </form>
 
 			</div>
