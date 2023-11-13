@@ -15,7 +15,7 @@ import { Experience, PageInfo, Project, Skill, Social } from '../typings'
 // import {fetchSocials} from "../utils/fetchSocials"
 // import { fetchProjects } from '../utils/fetchProjects'
 // import { fetchSkills } from '../utils/fetchSkills'
-
+ 
 // type Props = {
 //   pageInfo:PageInfo; 
 //   experiences: Experience[];
@@ -26,8 +26,8 @@ import { Experience, PageInfo, Project, Skill, Social } from '../typings'
 
 const Home = () => {
   return (
-    <div className="bg-[rgb(38,38,38)] text-white h-screen snap-y snap-mandatory overflow-y-scroll 
-    overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
+    <div className="bg-[#333] text-white h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth
+    overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#169137]/80">
       <Head>
         <title>Patricks portfolio</title>
 
@@ -49,15 +49,16 @@ const Home = () => {
       <section id="experience" className='snap-center'>
         <WorkExperience />
       </section>
+       {/* Project */}
+       <section id="projects" className='snap-start'>
+        <Projects />
+      </section>
 
       {/* Skills */}
       <section id="skills" className='snap-start'>
         <Skills />
       </section>
-      {/* Project */}
-      <section id="projects" className='snap-start'>
-        <Projects />
-      </section>
+     
       {/* Contact Me */}
       <section id="contact" className='snap-start'>
         <Contact />
@@ -66,7 +67,7 @@ const Home = () => {
         
       <footer className='sticky bottom-5 w-full cursor-pointer'>
         <div className='flex items-center justify-center'>
-        <ArrowUpCircleIcon className="h-6 w-6 text-yellow-500"/>
+        <ArrowUpCircleIcon className="h-6 w-6" style={{color: '#169137'}}/>
         </div>
        
       </footer>
