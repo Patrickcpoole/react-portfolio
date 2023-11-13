@@ -14,17 +14,17 @@ import { Experience, PageInfo, Project, Skill, Social } from '../typings'
 // import { fetchPageInfo} from '../utils/fetchPageInfo'
 // import {fetchSocials} from "../utils/fetchSocials"
 // import { fetchProjects } from '../utils/fetchProjects'
-// import { fetchSkills } from '../utils/fetchSkills'
+import { fetchSkills } from '../utils/fetchSkills'
  
-// type Props = {
-//   pageInfo:PageInfo; 
-//   experiences: Experience[];
-//   skills: Skill[];
-//   projects: Project[];
-//   socials: Social[];
-// }
+type Props = {
+  // pageInfo:PageInfo; 
+  // experiences: Experience[];
+  skills: Skill[];
+  // projects: Project[];
+  // socials: Social[];
+}
 
-const Home = () => {
+const Home: React.FC<Props> = ({ skills }) => {
   return (
     <div className="bg-[#333] text-white h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth
     overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#169137]/80">
@@ -55,8 +55,8 @@ const Home = () => {
       </section>
 
       {/* Skills */}
-      <section id="skills" className='snap-start'>
-        <Skills />
+      <section id="skills" className='snap-start' >
+        <Skills skills={skills}/>
       </section>
      
       {/* Contact Me */}
@@ -80,26 +80,26 @@ const Home = () => {
 
 export default Home;
 
-// export const getStaticProps: GetStaticProps <Props> = async () => {
-//   const pageInfo: PageInfo = await fetchPageInfo();
-//   const experiences: Experience[] = await fetchExperiences();
-//   const skills: Skill[] = await fetchSkills();
-//   const projects: Project[] = await fetchProjects();
-//   const socials: Social[]= await fetchSocials();
+export const getStaticProps: GetStaticProps <Props> = async () => {
+  // const pageInfo: PageInfo = await fetchPageInfo();
+  // const experiences: Experience[] = await fetchExperiences();
+  const skills: Skill[] = await fetchSkills();
+  // const projects: Project[] = await fetchProjects();
+  // const socials: Social[]= await fetchSocials();
+  console.log('skills from fetchedSkills', skills)
+  return {
+    props: {
+      // pageInfo,
+      // experiences,
+      skills,
+      // projects,
+      // socials
+    },
 
-//   return {
-//     props: {
-//       pageInfo,
-//       experiences,
-//       skills,
-//       projects,
-//       socials
-//     },
+    // Next.js will attempt to re-generate the page: 
+    // When a request comes in 
+    // At most once every 10 seconds
+    revalidate: 60,
+  };
 
-//     // Next.js will attempt to re-generate the page: 
-//     // When a request comes in 
-//     // At most once ecery 10 seconds
-//     revalidate: 10,
-//   };
-
-// };
+};

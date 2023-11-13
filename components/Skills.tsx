@@ -8,13 +8,15 @@ import {
 	FaThList,
 	FaBars
 } from 'react-icons/fa'; // For the GitHub icon
+import {Skill as SkillType} from '../typings'
 import Skill from './Skill';
 
 type Props = {
 	directionLeft?: boolean;
+	skills: SkillType[];
 };
 
-function Skills({ directionLeft}: Props) {
+function Skills({ directionLeft, skills}: Props) {
 	const [filterSkillType, setFilterSkillskillType] = useState('all');
 
 	// Function to handle button click
@@ -189,12 +191,11 @@ function Skills({ directionLeft}: Props) {
 				className={`${containerClass} absolute top-72`}
 			>
 				{/* Map through filtered skills */}
-				{filteredSkills.map((skill) => (
+				{skills?.map((skill) => (
 					<Skill
-						key={skill.skill}
-						url={skill.url}
-						skill={skill.skill}
-						skillType={skill.skillType}
+						key={skill._id}
+						skill={skill}
+						
 					/>
 				))}
 			</motion.div>
