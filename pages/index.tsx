@@ -79,7 +79,7 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
 };
 
 export default Home;
-
+// deploying
 export const getStaticProps: GetStaticProps <Props> = async () => {
   const skills: Skill[] = await fetchSkills();
   const pageInfo: PageInfo = await fetchPageInfo();
