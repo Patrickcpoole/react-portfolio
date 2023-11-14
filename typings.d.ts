@@ -35,7 +35,6 @@ export interface PageInfo extends SanityBody {
   name: string;
   about: string;
   phoneNumber: string;
-  profilePic: Image;
 }
 
 export interface Skill extends SanityBody {
