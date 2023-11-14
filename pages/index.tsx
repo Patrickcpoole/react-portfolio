@@ -33,38 +33,38 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
 
       </Head>
 
-      {/*Header */}
-      <Header socials={socials}/>
-      {/* Hero */}
+  
+      {/* <Header socials={socials}/>
+      
 
       <section id='hero' className='snap-start'>
         <Hero pageInfo={pageInfo}  />
       </section>
 
-      {/* About*/}
+     
         <section id="about" className='snap-center'>
           <About pageInfo={pageInfo}/>
         </section>
-      {/* Experience */}
+  
       <section id="experience" className='snap-center'>
         <WorkExperience experience={experience} />
       </section>
-       {/* Project */}
+   
        <section id="projects" className='snap-start'>
         <Projects projects={projects} />
       </section>
 
-      {/* Skills */}
+   
       <section id="skills" className='snap-start' >
         <Skills skills={skills}/>
       </section>
      
-      {/* Contact Me */}
+    
       <section id="contact" className='snap-start'>
         <Contact pageInfo={pageInfo} />
-      </section>
-      <Link href="#hero" legacyBehavior>
-        
+      </section>*}
+  */}
+        <Link href="#hero" legacyBehavior> 
       <footer className='sticky bottom-5 w-full cursor-pointer'>
         <div className='flex items-center justify-center'>
         <ArrowUpCircleIcon className="h-6 w-6" style={{color: '#169137'}}/>
