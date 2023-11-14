@@ -86,7 +86,7 @@ export const getStaticProps: GetStaticProps <Props> = async () => {
   const skills: Skill[] = await fetchSkills();
   // const projects: Project[] = await fetchProjects();
   // const socials: Social[]= await fetchSocials();
-  console.log('skills from fetchedSkills', skills)
+  
   return {
     props: {
       // pageInfo,

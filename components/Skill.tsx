@@ -4,15 +4,12 @@ import {Skill} from '../typings'
 import { urlFor } from "../sanity";
 
 type Props = {
-	
 	skill: Skill;
-
 };
 
 
 function Skill({skill }: Props) {
 	
-	console.log('skill being passed', skill)
 	return (
 		<div className="group relative flex cursor-pointer">
 			<div
