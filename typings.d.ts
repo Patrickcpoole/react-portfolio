@@ -1,3 +1,4 @@
+import { Typewriter } from "react-simple-typewriter";
 
 
 interface SanityBody {
@@ -26,11 +27,13 @@ interface smallImage {
 export interface PageInfo extends SanityBody {
   _type: "PageInfo";
   address: string;
-  backgroundInformation: string;
+  aboutImage: string;
   email: string;
   role: string;
+  typewriter: string[];
   heroImage: Image;
   name: string;
+  about: string;
   phoneNumber: string;
   profilePic: Image;
 }

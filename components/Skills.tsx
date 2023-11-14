@@ -6,9 +6,9 @@ import {
 	FaCodepen,
 	FaFileCode,
 	FaThList,
-	FaBars
+	FaBars,
 } from 'react-icons/fa'; // For the GitHub icon
-import {Skill as SkillType} from '../typings'
+import { Skill as SkillType } from '../typings';
 import Skill from './Skill';
 
 type Props = {
@@ -16,7 +16,7 @@ type Props = {
 	skills: SkillType[];
 };
 
-function Skills({ directionLeft, skills}: Props) {
+function Skills({ directionLeft, skills }: Props) {
 	const [filterSkillType, setFilterSkillskillType] = useState('all');
 
 	// Function to handle button click
@@ -37,21 +37,16 @@ function Skills({ directionLeft, skills}: Props) {
 		// The empty dependency array ensures this effect runs only once on mount
 	}, [controls]);
 
-
 	const filterButtons = [
 		{ label: 'all', icon: FaBars, skillType: 'all' },
 		{ label: 'Languages', icon: FaCode, skillType: 'language' },
 		{ label: 'Frameworks', icon: FaCodepen, skillType: 'framework' },
 		{ label: 'CSS Frameworks', icon: FaFileCode, skillType: 'css' },
-		{
-			label: 'Version Control',
-			icon: FaCodeBranch,
-			skillType: 'version-control',
-		},
-		{ label: 'Productivity', icon: FaThList, skillType: 'productivity' },
+		{label: 'Version Control', icon: FaCodeBranch, skillType: 'version-control' },
+		{ label: 'Productivity', icon: FaThList, skillType: 'productivity' }
 	];
 
-	const orderedSkills = skills.sort((a, b) => a.order - b.order)
+	const orderedSkills = skills.sort((a, b) => a.order - b.order);
 
 	const filteredSkills = orderedSkills.filter(
 		(skill) => filterSkillType === 'all' || skill.skillType === filterSkillType
@@ -90,13 +85,8 @@ function Skills({ directionLeft, skills}: Props) {
 				animate={controls}
 				className={`${containerClass} absolute top-64`}
 			>
-				{/* Map through filtered skills */}
 				{filteredSkills.map((skill) => (
-					<Skill
-						key={skill._id}
-						skill={skill}
-						
-					/>
+					<Skill key={skill._id} skill={skill} />
 				))}
 			</motion.div>
 		</motion.div>

@@ -1,6 +1,5 @@
 import React from 'react';
-
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'; // For the GitHub icon
+import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Social } from '../typings';
@@ -28,7 +27,6 @@ function Header({ socials }: Props) {
 				}}
 				className='flex flex-row items-center'
 			>
-				{/* Social Icons */}
 				{socials.map((social, index) => (
 					<div key={index} className="mx-1">
 						<a href={social.url} target='_blank' rel='noopener noreferrer'>
@@ -69,7 +67,6 @@ function Header({ socials }: Props) {
 							className='text-heading mr-3 group-hover:text-accent'
 							size={'1.5em'}
 						/>
-
 						<p className='uppercase hidden md:inline-flex text-sm text-heading group-hover:text-accent'>
 							Get In Touch
 						</p>

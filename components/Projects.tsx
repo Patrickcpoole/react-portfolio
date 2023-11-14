@@ -1,16 +1,15 @@
 import React, { useRef, useEffect, useCallback, useState } from 'react';
-
 import { FaGithub, FaMobile } from 'react-icons/fa'; // For the GitHub icon
-
+import Image from 'next/image';
 import { MdArrowBack, MdArrowForward } from 'react-icons/md';
-import {Project} from '../typings'
-import { urlFor } from "../sanity";
+import { Project } from '../typings';
+import { urlFor } from '../sanity';
 
 type Props = {
-	projects: Project[]
+	projects: Project[];
 };
 
-function Projects({projects}: Props) {
+function Projects({ projects }: Props) {
 	const [isScrolling, setIsScrolling] = useState(false);
 	const [isVisible, setIsVisible] = useState(false);
 
@@ -68,8 +67,11 @@ function Projects({projects}: Props) {
 		const wheelListener = handleWheel as unknown as EventListener;
 		window.addEventListener('keydown', handleKeyPress);
 
-		if (scrollContainerRef.current) {
-			scrollContainerRef.current.addEventListener('wheel', wheelListener, {
+		const currentScrollContainer = scrollContainerRef.current;
+		const currentProject = projectRef.current;
+
+		if (currentScrollContainer) {
+			currentScrollContainer.addEventListener('wheel', wheelListener, {
 				passive: false,
 			});
 		}
@@ -79,16 +81,15 @@ function Projects({projects}: Props) {
 		}
 
 		return () => {
-			if (scrollContainerRef.current) {
-				scrollContainerRef.current.removeEventListener('wheel', wheelListener);
+			if (currentScrollContainer) {
+				currentScrollContainer.removeEventListener('wheel', wheelListener);
 			}
-			if (projectRef.current) {
-				observer.unobserve(projectRef.current);
+			if (currentProject) {
+				observer.unobserve(currentProject);
 			}
 			window.removeEventListener('keydown', handleKeyPress);
 		};
 	}, [handleWheel, handleKeyPress]);
-
 
 	return (
 		<div
@@ -123,35 +124,42 @@ function Projects({projects}: Props) {
 					bg-card p-10 cursor-pointer overflow-hidden hover:shadow-2xl transition-transform duration-300 ease-in-out'
 						>
 							<div className='h-1/2'>
-								<img src={urlFor(project?.image).url()} className='rounded-t-md ' alt='' />
+								<Image
+									height={1000}
+									width={1600}
+									src={urlFor(project?.image).url()}
+									className='rounded-t-md '
+									alt=''
+								/>
 							</div>
 							<div className='h-1/2'>
 								<h4 className='text-4xl'>{project.title}</h4>
 								<div className='flex flex-row justify-center items-center mt-4'>
-									{project.technologies.map(technology => (
-											<img
+									{project.technologies.map((technology) => (
+										<Image
+											height={200}
+											width={200}
 											key={technology._id}
-											className='w-10 h-10 mx-1'
+											className='w-12 h-12 mx-1'
 											src={urlFor(technology?.image).url()}
 											alt=''
-										/> )
-										)}
-				
+										/>
+									))}
 								</div>
 								<p className='text-xl mt-2'>{project.summary}</p>
 								<div className='flex justify-center items-center mt-10'>
-								<a href={project.linkToGithub}>
-									<button className='projectButton'>
-										<FaGithub className='mr-2'/>
-										View Github
-									</button>
-								</a>
-								<a href={project.linkToBuild}>
-									<button className='projectButton flex '>
-										<FaMobile className='mr-2'/>
-										View Demo
-									</button>
-								</a>
+									<a href={project.linkToGithub}>
+										<button className='projectButton'>
+											<FaGithub className='mr-2' />
+											View Github
+										</button>
+									</a>
+									<a href={project.linkToBuild}>
+										<button className='projectButton flex '>
+											<FaMobile className='mr-2' />
+											View Demo
+										</button>
+									</a>
 								</div>
 							</div>
 						</article>

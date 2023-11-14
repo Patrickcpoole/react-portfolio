@@ -43,7 +43,7 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
 
       {/* About*/}
         <section id="about" className='snap-center'>
-          <About />
+          <About pageInfo={pageInfo}/>
         </section>
       {/* Experience */}
       <section id="experience" className='snap-center'>
@@ -61,7 +61,7 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
      
       {/* Contact Me */}
       <section id="contact" className='snap-start'>
-        <Contact />
+        <Contact pageInfo={pageInfo} />
       </section>
       <Link href="#hero" legacyBehavior>
         
