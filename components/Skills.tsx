@@ -73,7 +73,7 @@ function Skills({ directionLeft, skills}: Props) {
 				Hover over button for skill name. Click a filter button to show specific
 				skills.
 			</h5>
-			<div className='absolute top-36 flex flex-row justify-center items-center  h-36'>
+			<div className='absolute top-32 flex flex-row justify-center items-center  h-36'>
 				{filterButtons.map((button) => (
 					<button
 						key={button.label}
@@ -88,7 +88,7 @@ function Skills({ directionLeft, skills}: Props) {
 			<motion.div
 				initial={{ x: directionLeft ? '-100%' : '100%', opacity: 0 }}
 				animate={controls}
-				className={`${containerClass} absolute top-72`}
+				className={`${containerClass} absolute top-64`}
 			>
 				{/* Map through filtered skills */}
 				{filteredSkills.map((skill) => (

@@ -8,7 +8,7 @@
      transition-all hover:border-[#169137]/40 hover:text-[#FFF] hover:bg-[#169137]/40
   }
   .projectButton {
-    @apply px-8 mx-5 py-3 border border-heading rounded-full uppercase text-xs tracking-widest text-text
+    @apply px-6 mx-3 py-2 border border-heading rounded-full uppercase text-xs tracking-widest text-text
      transition-all hover:border-[#169137]/40 hover:text-text hover:bg-[#169137]/40 flex justify-center items-center
   }
   .skillFilterButton {

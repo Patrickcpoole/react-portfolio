@@ -10,21 +10,21 @@ import Skills from '../components/Skills'
 import WorkExperience from '../components/WorkExperience'
 import { ArrowUpCircleIcon } from '@heroicons/react/24/solid'
 import { Experience, PageInfo, Project, Skill, Social } from '../typings'
-// import { fetchExperiences } from '../utils/fetchExperiences'
-// import { fetchPageInfo} from '../utils/fetchPageInfo'
-// import {fetchSocials} from "../utils/fetchSocials"
-// import { fetchProjects } from '../utils/fetchProjects'
+import { fetchExperiences } from '../utils/fetchExperiences'
+import { fetchPageInfo} from '../utils/fetchPageInfo'
+import {fetchSocials} from "../utils/fetchSocials"
+import { fetchProjects } from '../utils/fetchProjects'
 import { fetchSkills } from '../utils/fetchSkills'
  
 type Props = {
-  // pageInfo:PageInfo; 
-  // experiences: Experience[];
+  pageInfo:PageInfo; 
+  experience: Experience[];
   skills: Skill[];
-  // projects: Project[];
-  // socials: Social[];
+  projects: Project[];
+  socials: Social[];
 }
 
-const Home: React.FC<Props> = ({ skills }) => {
+const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials }) => {
   return (
     <div className="bg-[#333] text-white h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth
     overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#169137]/80">
@@ -34,11 +34,11 @@ const Home: React.FC<Props> = ({ skills }) => {
       </Head>
 
       {/*Header */}
-      <Header />
+      <Header socials={socials}/>
       {/* Hero */}
 
       <section id='hero' className='snap-start'>
-        <Hero />
+        <Hero pageInfo={pageInfo}  />
       </section>
 
       {/* About*/}
@@ -47,11 +47,11 @@ const Home: React.FC<Props> = ({ skills }) => {
         </section>
       {/* Experience */}
       <section id="experience" className='snap-center'>
-        <WorkExperience />
+        <WorkExperience experience={experience} />
       </section>
        {/* Project */}
        <section id="projects" className='snap-start'>
-        <Projects />
+        <Projects projects={projects} />
       </section>
 
       {/* Skills */}
@@ -81,19 +81,19 @@ const Home: React.FC<Props> = ({ skills }) => {
 export default Home;
 
 export const getStaticProps: GetStaticProps <Props> = async () => {
-  // const pageInfo: PageInfo = await fetchPageInfo();
-  // const experiences: Experience[] = await fetchExperiences();
+  const pageInfo: PageInfo = await fetchPageInfo();
+  const experience: Experience[] = await fetchExperiences();
   const skills: Skill[] = await fetchSkills();
-  // const projects: Project[] = await fetchProjects();
-  // const socials: Social[]= await fetchSocials();
+  const projects: Project[] = await fetchProjects();
+  const socials: Social[]= await fetchSocials();
   
   return {
     props: {
-      // pageInfo,
-      // experiences,
+      pageInfo,
+      experience,
       skills,
-      // projects,
-      // socials
+      projects,
+      socials
     },
 
     // Next.js will attempt to re-generate the page: 

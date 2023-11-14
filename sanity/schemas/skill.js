@@ -12,7 +12,7 @@ export default {
 		{
 			name: 'order',
 			title: 'Order',
-			description: 'Order of skill son page',
+			description: 'Order of skills on page',
 			type: 'number',
 		},
 		{
@@ -29,5 +29,6 @@ export default {
 				hotspot: true,
 			},
 		},
+
 	],
 };

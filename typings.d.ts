@@ -1,3 +1,5 @@
+
+
 interface SanityBody {
   _createdAt: string;
   _id: string;
@@ -6,6 +8,14 @@ interface SanityBody {
 }
 
 interface Image {
+  _type: "image";
+  asset: {
+    _ref: string;
+    _type: "reference"
+  }
+}
+
+interface smallImage {
   _type: "image";
   asset: {
     _ref: string;
@@ -28,6 +38,7 @@ export interface PageInfo extends SanityBody {
 export interface Skill extends SanityBody {
   _type: "skill";
   image: Image;
+  smallImage: smallImage;
   order: number;
   skillType: string;
   title: string;
@@ -38,6 +49,7 @@ export interface Experience extends SanityBody {
   company: string;
   companyImage: Image;
   dateStarted: date;
+  linkToWebsite: string;
   dateEnded: date;
   isCurrentlyWorkingHere: boolean;
   jobTitle: string;
@@ -50,6 +62,7 @@ export interface Project extends SanityBody {
   _type: "project";
   image: Image;
   linkToBuild: string;
+  linkToGithub: string;
   summary: string;
   technologies: Technology[]
 }

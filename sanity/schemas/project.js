@@ -32,6 +32,11 @@ export default {
       name: "linkToBuild",
       title: "LinkToBuild",
       type: "url"
+    },
+    {
+      name: "linkToGithub",
+      title: "Link to Github",
+      type: "url"
     }
     
   ],
