@@ -4,11 +4,11 @@
 
 @layer components {
   .heroButton {
-    @apply px-6 mx-5 py-2 border border-[#333] rounded-full uppercase text-xs tracking-widest text-heading
+    @apply px-6 mx-5 py-2 border border-primary rounded-full uppercase text-xs tracking-widest text-heading
      transition-all hover:border-[#169137]/40 hover:text-[#FFF] hover:bg-[#169137]/40
   }
   .projectButton {
-    @apply px-8 mx-5 py-3 border border-heading rounded-full uppercase text-xs tracking-widest text-text
+    @apply px-6 mx-3 py-2 border border-heading rounded-full uppercase text-xs tracking-widest text-text
      transition-all hover:border-[#169137]/40 hover:text-text hover:bg-[#169137]/40 flex justify-center items-center
   }
   .skillFilterButton {
@@ -16,8 +16,8 @@
      transition-all hover:border-[#169137]/40 hover:text-text hover:bg-[#169137]/40 flex justify-center items-center
   }
   .contactInput {
-    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424]
-    text-gray-500 placeholder-gray-500 transition-all focus:border-[#F7AB0A]/40 focus:text-[#F7AB0A]/40
+    @apply outline-none bg-card rounded-sm border-b px-10 py-4 border-primary
+    text-text placeholder-heading transition-all focus:border-[#169137]/40 focus:text-text
   }
 }
 

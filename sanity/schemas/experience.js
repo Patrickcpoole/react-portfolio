@@ -22,6 +22,11 @@ export default {
       type: "text",
     },
     {
+      name: "linkToWebsite",
+      title: "Link To Website",
+      type: "url"
+    },
+    {
       name: "dateStarted",
       title: "DateStarted",
       type: "date",

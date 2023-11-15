@@ -9,6 +9,11 @@ export default {
       type: "string"
     },
     {
+      name: "about",
+      title: "About",
+      type: "string"
+    },
+    {
       name: "role",
       title: "Role",
       type: "string"
@@ -22,12 +27,18 @@ export default {
       }
     },
     {
-      name: "backgroundInformation",
-      title: "ProfilePic",
+      name: "aboutImage",
+      title: "aboutImage",
       type: "image",
       options: {
         hotspot: true
       }
+    },
+    {
+      name: "typewriter",
+      title: "Typewriter",
+      type: "array",
+      of: [{type: "string"}]
     },
     {
       name: "phoneNumber",

@@ -1,3 +1,6 @@
+import { Typewriter } from "react-simple-typewriter";
+
+
 interface SanityBody {
   _createdAt: string;
   _id: string;
@@ -13,29 +16,33 @@ interface Image {
   }
 }
 
+interface smallImage {
+  _type: "image";
+  asset: {
+    _ref: string;
+    _type: "reference"
+  }
+}
+
 export interface PageInfo extends SanityBody {
   _type: "PageInfo";
   address: string;
-  backgroundInformation: string;
+  aboutImage: string;
   email: string;
   role: string;
+  typewriter: string[];
   heroImage: Image;
   name: string;
+  about: string;
   phoneNumber: string;
-  profilePic: Image;
-}
-
-export interface Technology extends SanityBody {
-  _type: "skill";
-  image: Image;
-  progress: number;
-  title: string;
 }
 
 export interface Skill extends SanityBody {
   _type: "skill";
   image: Image;
-  progress: number;
+  smallImage: smallImage;
+  order: number;
+  skillType: string;
   title: string;
 }
 
@@ -44,6 +51,7 @@ export interface Experience extends SanityBody {
   company: string;
   companyImage: Image;
   dateStarted: date;
+  linkToWebsite: string;
   dateEnded: date;
   isCurrentlyWorkingHere: boolean;
   jobTitle: string;
@@ -56,6 +64,7 @@ export interface Project extends SanityBody {
   _type: "project";
   image: Image;
   linkToBuild: string;
+  linkToGithub: string;
   summary: string;
   technologies: Technology[]
 }
