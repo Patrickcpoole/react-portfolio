@@ -10,7 +10,7 @@ type Props = {
 
 function WorkExperience({ experience }: Props) {
   const orderedExperience = experience.sort(
-    (a, b) => new Date(a.dateStarted).getTime() - new Date(b.dateStarted).getTime()
+    (a, b) => new Date(b.dateStarted).getTime() - new Date(a.dateStarted).getTime()
   );
 
   return (
@@ -18,7 +18,7 @@ function WorkExperience({ experience }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="h-screen w-screen mb-20 flex relative flex-col overflow-scroll md:overflow-hidden text-left justify-start items-center"
+      className="w-screen mb-20 flex relative flex-col overflow-hidden md:overflow-hidden text-left justify-start items-center"
     >
       <h3 className="section-heading mt-24 md:mt-0">
         Experience

@@ -29,7 +29,7 @@ function Projects({ projects }: Props) {
 							});
 							// Scroll back to the top after the animation completes
 							setTimeout(() => {
-									container.scrollTop = 0;
+									
 									setIsScrolling(false);
 							}, 300);
 					}

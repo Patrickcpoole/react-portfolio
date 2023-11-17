@@ -10,8 +10,10 @@
   }
 
   .section-heading {
-    @apply relative mt-10 uppercase pl-3 tracking-[0.5em] md:tracking-[0.75em] text-heading text-2xl mx-auto
+    @apply relative uppercase pl-3 tracking-[0.5em] md:tracking-[0.75em] text-heading text-2xl mx-auto
   }
+
+
 
   .section-sub-heading {
     @apply relative mt-2 uppercase pl-3 text-heading text-xs md:text-sm text-center mb-4 mx-auto tracking-[0.25em]
