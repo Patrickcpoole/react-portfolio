@@ -13,9 +13,14 @@
     @apply relative mt-10 uppercase pl-3 tracking-[0.5em] md:tracking-[0.75em] text-heading text-2xl mx-auto
   }
 
+  .section-sub-heading {
+    @apply relative mt-2 uppercase pl-3 text-heading text-xs md:text-sm text-center mb-4 mx-auto tracking-[0.25em]
+  }
+
   .projectButton {
-    @apply px-6 mx-3 py-2 border border-heading rounded-full uppercase text-xs tracking-widest text-text
-    transition-all hover:border-[#169137]/40 hover:text-text hover:bg-[#169137]/40 flex justify-center items-center;
+    @apply border-[#169137]/40 bg-[#169137]/40 px-6 mx-1 py-2 border w-[45%] h-8
+    border-primary rounded-full uppercase text-xs tracking-widest text-text
+    transition-all justify-center items-center;
   }
 
   .skillFilterButton {
@@ -38,7 +43,8 @@
     }
 
     .projectButton {
-      @apply border-[#169137]/40 text-text bg-[#169137]/40;
+      @apply px-6 mx-3 py-2 border border-heading rounded-full uppercase text-xs tracking-widest text-text
+    transition-all hover:border-[#169137]/40 hover:text-text hover:bg-[#169137]/40 flex justify-center items-center;
     }
 
     .skillFilterButton {
