@@ -18,18 +18,19 @@
   }
 
   .projectButton {
+    @apply px-4 py-2 mx-5 border border-[#169137]/40 bg-[#169137]/40  rounded-full  text-xs tracking-widest text-text
+    transition-all flex justify-center items-center;
+    
+  }
+
+  .skillFilterButton {
     @apply border-[#169137]/40 bg-[#169137]/40 px-6 mx-1 py-2 border w-[45%] h-8
     border-primary rounded-full uppercase text-xs tracking-widest text-text
     transition-all justify-center items-center;
   }
 
-  .skillFilterButton {
-    @apply px-8 mx-5 border border-heading rounded-full uppercase text-xs tracking-widest text-text
-    transition-all hover:border-[#169137]/40 hover:text-text hover:bg-[#169137]/40 flex justify-center items-center;
-  }
-
   .contactInput {
-    @apply outline-none bg-card rounded-sm border-b px-10 py-4 border-primary
+    @apply outline-none bg-card rounded-sm border-b px-4 py-4 border-primary w-full
     text-text placeholder-heading transition-all focus:border-[#169137]/40 focus:text-text;
   }
  
@@ -52,7 +53,8 @@
     }
 
     .contactInput {
-      @apply border-[#169137]/40 text-text bg-[#169137]/40;
+      @apply outline-none bg-card rounded-sm border-b px-10 py-4 border-primary
+      text-text placeholder-heading transition-all focus:border-[#169137]/40 focus:text-text;
     }
   }
 

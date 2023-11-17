@@ -13,25 +13,30 @@ function Projects({ projects }: Props) {
     const [isScrolling, setIsScrolling] = useState(false);
     const [isVisible, setIsVisible] = useState(false);
 
-    const projectRef = useRef(null);
+    const projectRef = useRef<HTMLDivElement>(null);
 
     const scroll = useCallback(
-        (direction: 'left' | 'right') => {
-            if (isScrolling) return;
-            setIsScrolling(true);
-            if (scrollContainerRef.current) {
-                const container = scrollContainerRef.current;
-                const scrollAmount =
-                    direction === 'left' ? -container.offsetWidth : container.offsetWidth;
-                container.scrollTo({
-                    left: container.scrollLeft + scrollAmount,
-                    behavior: 'smooth',
-                });
-            }
-            setTimeout(() => setIsScrolling(false), 300);
-        },
-        [isScrolling]
-    );
+			(direction: 'left' | 'right') => {
+					if (isScrolling) return;
+					setIsScrolling(true);
+					if (scrollContainerRef.current) {
+							const container = scrollContainerRef.current;
+							const scrollAmount =
+									direction === 'left' ? -container.offsetWidth : container.offsetWidth;
+							container.scrollTo({
+									left: container.scrollLeft + scrollAmount,
+									behavior: 'smooth',
+							});
+							// Scroll back to the top after the animation completes
+							setTimeout(() => {
+									container.scrollTop = 0;
+									setIsScrolling(false);
+							}, 300);
+					}
+			},
+			[isScrolling]
+	);
+	
 
     const handleKeyPress = useCallback(
         (event: KeyboardEvent) => {
@@ -92,7 +97,7 @@ function Projects({ projects }: Props) {
     return (
         <div
             ref={projectRef}
-            className='relative w-screen flex overflow-x-hidden flex-col text-left max-w-full justify-start mx-auto items-center z-0 overflow-y-scroll'
+            className='relative w-screen flex overflow-x-hidden flex-col text-left max-w-full justify-start mx-auto items-center z-0 overflow-y-scroll mb-14'
         >
             <h3 className='section-heading mt-20'>Projects</h3>
             <h5 className='section-sub-heading md:hidden'>
@@ -109,7 +114,7 @@ function Projects({ projects }: Props) {
             )}
             <div
                 ref={scrollContainerRef}
-                className='relative w-[95%] flex snap-x snap-mandatory z-20 overflow-y-hidden mb-8'
+                className='relative w-[95%] flex snap-x snap-mandatory overflow-y-hidden'
             >
                 {projects.map((project, key) => (
 									<div key={key} className='snap-center flex-shrink-0 w-full md:w-[40%] overflow-auto transition-transform duration-300 ease-in-out mx-10 mb-4'>

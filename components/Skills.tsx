@@ -59,7 +59,7 @@ function Skills({ directionLeft, skills }: Props) {
 	return (
 		<motion.div
 			className='flex flex-col text-center md:text-left 
-    max-w-[2000px] xl:px-10 min-h-screen justify-start xl:space-y-0 mx-auto items-center'
+    max-w-[2000px] xl:px-10 justify-start xl:space-y-0 mx-auto items-center mb-16'
 		>
 			<h3 className='section-heading mt-20'>
 				Skills
@@ -76,7 +76,7 @@ function Skills({ directionLeft, skills }: Props) {
 				{filterButtons.map((button, index) => (
 				
 					<button key={index}
-						className='projectButton flex mb-4'
+						className='skillFilterButton flex mb-4'
 						onClick={() => handleFilterClick(button.skillType)}
 					>
 						{React.createElement(button.icon, { className: 'mr-2' })}

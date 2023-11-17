@@ -23,13 +23,13 @@ function Contact({pageInfo}: Props) {
 	};
 	return (
 		<div
-			className='h-screen w-screen flex relative flex-col text-center 
-    max-w-7xl justify-start mx-auto items-center'
+			className='w-screen flex relative flex-col text-center 
+    max-w-7xl justify-start mx-auto items-center mb-16'
 		>
-			<h3 className='mt-36 ml-5 uppercase tracking-[20px] text-heading text-2xl'>
+			<h3 className='section-heading mt-20'>
 				Contact
 			</h3>
-			<div className='flex flex-col mt-12'>
+			<div className='flex flex-col mt-12 w-full'>
 				<div className='space-y-10 mb-12'>
 					<div className='flex items-center justify-center '>
 						<PhoneIcon className='text-[#169137] h-7 w-7 mr-2' />
@@ -48,9 +48,9 @@ function Contact({pageInfo}: Props) {
 
 				<form
 					onSubmit={handleSubmit(onSubmit)}
-					className='flex flex-col space-y-2 w-fit mx-auto'
+					className='flex flex-col space-y-2 w-[95%] md:w-fit mx-auto'
 				>
-					<div className='flex space-x-2'>
+					<div className='flex flex-col md:flex-row items-center  w-full space-y-2'>
 						<input
 							{...register('name')}
 							placeholder='Name'

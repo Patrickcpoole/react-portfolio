@@ -95,7 +95,7 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
         
       <footer className='sticky bottom-5 w-full cursor-pointer'>
         <div className='flex items-center justify-center'>
-        <ArrowUpCircleIcon className="h-6 w-6" style={{color: '#169137'}}/>
+        <ArrowUpCircleIcon className="h-8 w-8 md:h-6 md:w-6" style={{color: '#169137'}}/>
         </div>
        
       </footer>
