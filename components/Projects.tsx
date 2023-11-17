@@ -97,7 +97,7 @@ function Projects({ projects }: Props) {
     return (
         <div
             ref={projectRef}
-            className='relative min-h-screen w-screen flex overflow-x-hidden flex-col text-left max-w-full justify-start mx-auto items-center z-0 overflow-y-scroll my-10'
+            className='relative min-h-screen w-screen flex overflow-x-hidden flex-col text-left max-w-full justify-start mx-auto items-center z-0 overflow-y-scroll my-10 mb-20'
         >
             <h3 className='section-heading'>Projects</h3>
             <h5 className='section-sub-heading md:hidden'>

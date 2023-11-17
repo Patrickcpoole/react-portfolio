@@ -18,7 +18,7 @@ function WorkExperience({ experience }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="w-screen flex relative flex-col overflow-hidden md:overflow-hidden text-left justify-start items-center my-10"
+      className="w-screen flex relative flex-col overflow-hidden md:overflow-hidden text-left justify-start items-center my-10 mb-20"
     >
       <h3 className="section-heading md:mt-0">
         Experience
