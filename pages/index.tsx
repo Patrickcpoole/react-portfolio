@@ -1,4 +1,5 @@
 import { GetStaticProps} from 'next'
+import { useEffect } from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import About from '../components/About'
@@ -25,9 +26,36 @@ type Props = {
 }
 
 const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials }) => {
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+
+    const container = document.querySelector('.custom-scrollbar');
+
+  
+    const handleScroll = () => {
+      if (container) {
+        container.classList.add('scrolling');
+        clearTimeout(timer);
+
+        timer = setTimeout(() => {
+          container.classList.remove('scrolling');
+        }, 2000); // Adjust the delay as needed
+      }
+    };
+
+    if (container) {
+      container.addEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      if (container) {
+        container.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, []);
   return (
-    <div className="bg-[#333] text-white h-screen snap-y snap-mandatory overflow-y-scroll scroll-smooth
-    overflow-x-hidden z-0 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#169137]/80">
+    <div className="bg-primary text-text h-screen w-screen flex flex-col items-center snap-y snap-mandatory overflow-y-scroll overflow-x-hidden scroll-smooth z-0 
+    md:scrollbar md:scrollbar-thumb-[#169137]/80 md:scrollbar-track-card">
       <Head>
         <title>Patricks portfolio</title>
 
@@ -76,6 +104,7 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
 
     </div>
   )
+
 };
 
 export default Home;

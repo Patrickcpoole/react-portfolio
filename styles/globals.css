@@ -4,20 +4,59 @@
 
 @layer components {
   .heroButton {
-    @apply px-6 mx-5 py-2 border border-primary rounded-full uppercase text-xs tracking-widest text-heading
-     transition-all hover:border-[#169137]/40 hover:text-[#FFF] hover:bg-[#169137]/40
+    @apply border-[#169137]/40 bg-[#169137]/40 px-6 mx-1 py-2 border 
+    border-primary rounded-full uppercase text-xs tracking-widest text-text
+    transition-all
   }
+
+  .section-heading {
+    @apply relative mt-10 uppercase pl-3 tracking-[0.5em] md:tracking-[0.75em] text-heading text-2xl mx-auto
+  }
+
   .projectButton {
     @apply px-6 mx-3 py-2 border border-heading rounded-full uppercase text-xs tracking-widest text-text
-     transition-all hover:border-[#169137]/40 hover:text-text hover:bg-[#169137]/40 flex justify-center items-center
+    transition-all hover:border-[#169137]/40 hover:text-text hover:bg-[#169137]/40 flex justify-center items-center;
   }
+
   .skillFilterButton {
     @apply px-8 mx-5 border border-heading rounded-full uppercase text-xs tracking-widest text-text
-     transition-all hover:border-[#169137]/40 hover:text-text hover:bg-[#169137]/40 flex justify-center items-center
+    transition-all hover:border-[#169137]/40 hover:text-text hover:bg-[#169137]/40 flex justify-center items-center;
   }
+
   .contactInput {
     @apply outline-none bg-card rounded-sm border-b px-10 py-4 border-primary
-    text-text placeholder-heading transition-all focus:border-[#169137]/40 focus:text-text
+    text-text placeholder-heading transition-all focus:border-[#169137]/40 focus:text-text;
+  }
+ 
+
+  /* Responsive styles for small screens */
+  @screen md {
+    .heroButton {
+      @apply px-6 mx-5 py-2 border border-primary rounded-full uppercase text-xs tracking-widest text-heading
+    transition-all hover:border-[#169137]/40 hover:text-[#FFF] hover:bg-[#169137]/40;
+      
+    }
+
+    .projectButton {
+      @apply border-[#169137]/40 text-text bg-[#169137]/40;
+    }
+
+    .skillFilterButton {
+      @apply border-[#169137]/40 text-text bg-[#169137]/40;
+    }
+
+    .contactInput {
+      @apply border-[#169137]/40 text-text bg-[#169137]/40;
+    }
+  }
+
+  /* Responsive styles for medium screens */
+  @screen md {
+    /* Add styles for medium screens if needed */
+  }
+
+  /* Responsive styles for large screens */
+  @screen lg {
+    /* Add styles for large screens if needed */
   }
 }
-

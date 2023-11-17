@@ -16,7 +16,7 @@ function About({ pageInfo }: Props) {
 			className='flex flex-col relative h-screen text-center 
     md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center'
 		>
-			<h3 className='absolute top-24 uppercase tracking-[20px] text-heading text-2xl'>
+			<h3 className='section-heading'>
 				About
 			</h3>
 			<motion.img
@@ -33,15 +33,15 @@ function About({ pageInfo }: Props) {
 				}}
 				viewport={{ once: true }}
 				src={urlFor(pageInfo?.aboutImage).url()}
-				className='-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-md object-cover md:rounder-lg md:w-64 md:h-64
+				className='flex-shrink-0 w-56 -my-10 h-56 rounded-md object-cover md:rounder-lg md:w-64 md:h-64
       xl:w-[400px] xl:h-[400px] text-heading'
 			/>
-			<div className='space-y-10 px-0 md:px-10'>
-				<h4 className='text-5xl font-semibold'>
+			<div className='md:space-y-10 px-0 md:px-10'>
+				<h4 className='text-3xl md:text-5xl font-semibold mb-5 '>
 					Here is a <span className='underline decoration-accent'>little</span>{' '}
 					background
 				</h4>
-				<p className='text-xl'>{pageInfo.about}</p>
+				<p className='text-lg md:text-xl'>{pageInfo.about}</p>
 			</div>
 		</motion.div>
 	);

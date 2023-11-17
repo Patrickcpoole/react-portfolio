@@ -94,88 +94,97 @@ function Projects({ projects }: Props) {
 	return (
 		<div
 			ref={projectRef}
-			className='h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly
+			className='h-screen relative flex overflow-hidden flex-col text-left  max-w-full justify-start
     mx-auto items-center z-0'
 		>
-			<h3 className='absolute top-24 uppercase tracking-[20px] text-heading text-2xl '>
-				Projects
-			</h3>
+			<h3 className='section-heading mt-24 '>Projects</h3>
 
 			{isVisible && (
 				<button
 					onClick={() => scroll('left')}
-					className='fixed left-4 top-1/2 text-heading z-30 hover:text-accent'
+					className='hidden md:block fixed left-4 top-1/2 text-heading z-30 hover:text-accent'
 				>
 					<MdArrowBack size={'3em'} />
 				</button>
 			)}
 			<div
 				ref={scrollContainerRef}
-				className='relative w-full flex overflow-y-hidden  snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#169137]/80'
+				className='relative w-full flex overflow-y-hidden  snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#169137]/80 '
 			>
-				{projects.map((project, key) => (
-					<div
-						className='w-screen flex-shrink-0 snap-center flex flex-row space-y-5 items-center justify-center p-20 md:p44 h-screen mt-20'
-						key={key}
-					>
+				{projects.map((project, i) => (
+					<div key={i} className="flex flex-col items-center mt-12 ">
 						<article
-							className='flex flex-col rounded-md items-center justify-center space-y-7 flex-shrink-0 shadow-xl text-text w-[80%] md:w-[40%]
-          snap-center  text-center
-					bg-card p-10 cursor-pointer overflow-hidden hover:shadow-2xl transition-transform duration-300 ease-in-out'
+							
+							className='flex flex-col rounded-md items-center justify-center space-y-7 flex-shrink-0 shadow-xl text-text mx-auto w-[95%] md:w-[40%]
+          snap-center  text-center pb-5
+					bg-card  md:p-10 cursor-pointer overflow-hidden hover:shadow-2xl transition-transform duration-300 ease-in-out'
 						>
-							<div className='h-1/2'>
-								<Image
-									height={1000}
-									width={1600}
-									src={urlFor(project?.image).url()}
-									className='rounded-t-md '
-									alt=''
-								/>
+							<Image
+								height={1000}
+								width={1600}
+								src={urlFor(project?.image).url()}
+								className='rounded-t-md h-100%'
+								alt=''
+							/>
+
+							<h4 className='text-4xl'>{project.title}</h4>
+							<div className='flex flex-row justify-center items-center mt-4'>
+								{project.technologies.map((technology) => (
+									<Image
+										height={200}
+										width={200}
+										key={technology._id}
+										className='w-12 h-12 mx-1'
+										src={urlFor(technology?.image).url()}
+										alt=''
+									/>
+								))}
 							</div>
-							<div className='h-1/2'>
-								<h4 className='text-4xl'>{project.title}</h4>
-								<div className='flex flex-row justify-center items-center mt-4'>
-									{project.technologies.map((technology) => (
-										<Image
-											height={200}
-											width={200}
-											key={technology._id}
-											className='w-12 h-12 mx-1'
-											src={urlFor(technology?.image).url()}
-											alt=''
-										/>
-									))}
-								</div>
-								<p className='text-xl mt-2'>{project.summary}</p>
-								<div className='flex justify-center items-center mt-10'>
-									<a href={project.linkToGithub}>
-										<button className='projectButton'>
-											<FaGithub className='mr-2' />
-											View Github
-										</button>
-									</a>
-									<a href={project.linkToBuild}>
-										<button className='projectButton flex '>
-											<FaMobile className='mr-2' />
-											View Demo
-										</button>
-									</a>
-								</div>
+							<p className='text-xl mt-2'>{project.summary}</p>
+							<div className='flex justify-center items-center mt-10'>
+								<a href={project.linkToGithub}>
+									<button className='projectButton'>
+										<FaGithub className='mr-2' />
+										View Github
+									</button>
+								</a>
+								<a href={project.linkToBuild}>
+									<button className='projectButton flex '>
+										<FaMobile className='mr-2' />
+										View Demo
+									</button>
+								</a>
 							</div>
 						</article>
+
+						{isVisible && (
+							<div className='md:hidden flex space-x-4 mt-8'>
+								<button
+									onClick={() => scroll('left')}
+									className='z-30 text-heading hover:text-accent'
+								>
+									<MdArrowBack size={'2.5em'} />
+								</button>
+								<p className='text-2xl mt-1'>{`Project ${i+1}`}</p>
+								<button
+									onClick={() => scroll('right')}
+									className='z-30 text-heading hover:text-accent'
+								>
+									<MdArrowForward size={'2.5em'} />
+								</button>
+							</div>
+						)}
 					</div>
 				))}
 				{isVisible && (
 					<button
 						onClick={() => scroll('right')}
-						className='fixed right-6 top-1/2  z-30 text-heading hover:text-accent'
+						className='hidden md:block fixed right-6 top-1/2  z-30 text-heading hover:text-accent'
 					>
 						<MdArrowForward size={'3em'} />
 					</button>
 				)}
 			</div>
-
-			{/* <div className='w-full absolute top-[25%] bg-[#169137]/20 left-0 h-[500px] -skew-y-12' /> */}
 		</div>
 	);
 }
