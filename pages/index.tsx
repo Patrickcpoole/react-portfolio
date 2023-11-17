@@ -78,7 +78,7 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
         <WorkExperience experience={experience} />
       </section>
    
-       <section id="projects" className='snap-start scroll-my-16'>
+       <section id="projects" className='snap-start scroll-my-20'>
         <Projects projects={projects} />
       </section>
 
@@ -93,7 +93,7 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
       </section>
       <Link href="#hero" legacyBehavior>
         
-      <footer className='sticky bottom-5 w-full cursor-pointer'>
+      <footer className='hidden md:sticky bottom-5 w-full cursor-pointer'>
         <div className='flex items-center justify-center'>
         <ArrowUpCircleIcon className="h-8 w-8 md:h-6 md:w-6" style={{color: '#169137'}}/>
         </div>
