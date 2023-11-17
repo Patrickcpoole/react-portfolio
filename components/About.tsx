@@ -13,8 +13,8 @@ function About({ pageInfo }: Props) {
 			initial={{ opacity: 0 }}
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 1.5 }}
-			className='h-screen flex flex-col relative text-center 
-    md:text-left md:flex-row max-w-7xl px-10 justify-center overflow-y-scroll mx-auto items-center mb-6'
+			className='min-h-screen flex flex-col relative text-center 
+    md:text-left md:flex-row max-w-7xl px-10 justify-center mx-auto items-center my-6'
 		>
 			<h3 className='section-heading'>
 				About

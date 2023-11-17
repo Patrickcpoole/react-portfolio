@@ -97,9 +97,9 @@ function Projects({ projects }: Props) {
     return (
         <div
             ref={projectRef}
-            className='relative w-screen flex overflow-x-hidden flex-col text-left max-w-full justify-start mx-auto items-center z-0 overflow-y-scroll mb-14'
+            className='relative w-screen flex overflow-x-hidden flex-col text-left max-w-full justify-start mx-auto items-center z-0 overflow-y-scroll my-20'
         >
-            <h3 className='section-heading mt-20'>Projects</h3>
+            <h3 className='section-heading'>Projects</h3>
             <h5 className='section-sub-heading md:hidden'>
                 Swipe cards to view more
             </h5>
