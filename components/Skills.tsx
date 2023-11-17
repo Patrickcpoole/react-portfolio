@@ -53,37 +53,46 @@ function Skills({ directionLeft, skills }: Props) {
 	);
 	const containerClass =
 		filteredSkills.length < 5
-			? 'flex justify-center gap-5'
-			: 'grid grid-cols-5 gap-5';
+			? 'flex justify-center flex-wrap gap-5'
+			: 'md:grid md:grid-cols-5 flex justify-center flex-wrap gap-5';
 
 	return (
 		<motion.div
-			className='h-screen flex relative flex-col text-center md:text-left 
-    max-w-[2000px] xl:px-10 min-h-screen justify-center xl:space-y-0 mx-auto items-center'
+			className='flex flex-col text-center md:text-left 
+    max-w-[2000px] xl:px-10 justify-start xl:space-y-0 mx-auto items-center mb-16'
 		>
-			<h3 className='absolute top-24 uppercase tracking-[20px] text-heading text-2xl'>
+			<h3 className='section-heading mt-20'>
 				Skills
 			</h3>
-			<h5 className='absolute top-36 uppercase tracking-[3px] text-heading text-sm'>
+			<h5 className='hidden md:block section-sub-heading'>
 				Hover over button for skill name. Click a filter button to show specific
 				skills.
 			</h5>
-			<div className='absolute top-32 flex flex-row justify-center items-center  h-36'>
-				{filterButtons.map((button) => (
-					<button
-						key={button.label}
-						className='projectButton flex'
+			<h5 className='block md:hidden section-sub-heading'>
+				Tap skill button for skill name. Tap a filter button to show specific
+				skills.
+			</h5>
+			<div className='flex flex-wrap mb-2 justify-center'>
+				{filterButtons.map((button, index) => (
+				
+					<button key={index}
+						className='skillFilterButton flex mb-4'
 						onClick={() => handleFilterClick(button.skillType)}
 					>
 						{React.createElement(button.icon, { className: 'mr-2' })}
-						{button.label}
+						{index === 3 // Index of 'Version Control'
+        ? 'CSS' // Abbreviation for 'Version Control System'
+        : index === 4 // Index of 'CSS Frameworks'
+        ? 'VCS' // Abbreviation for 'CSS Frameworks'
+        : button.label}
 					</button>
+			
 				))}
 			</div>
 			<motion.div
 				initial={{ x: directionLeft ? '-100%' : '100%', opacity: 0 }}
 				animate={controls}
-				className={`${containerClass} absolute top-64`}
+				className={`${containerClass} `}
 			>
 				{filteredSkills.map((skill) => (
 					<Skill key={skill._id} skill={skill} />

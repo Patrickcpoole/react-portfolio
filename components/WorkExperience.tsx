@@ -7,25 +7,29 @@ type Props = {
 	experience: Experience[];
 };
 
+
 function WorkExperience({ experience }: Props) {
-	const orderedExperience = experience.sort((a, b) => new Date(a.dateStarted).getTime() - new Date(b.dateStarted).getTime());
-	return (
-		<motion.div
-			initial={{ opacity: 0 }}
-			whileInView={{ opacity: 1 }}
-			transition={{ duration: 1.5 }}
-			className='h-screen flex relative flex-col  overflow-hidden text-left max-w-full px-10 justify-evenly max-auto items-center'
-		>
-			<h3 className='absolute top-24 uppercase tracking-[20px] text-heading text-2xl '>
-				Experience
-			</h3>
-			<div className='flex flex-row max-sm:flex-col justify-center items-center md:space-y-0 p-10 snap-x snap-mandatory'>
-				{orderedExperience.map((job) => (
-					<ExperienceCard key={job._id} job={job} />
-				))}
-			</div>
-		</motion.div>
-	);
+  const orderedExperience = experience.sort(
+    (a, b) => new Date(a.dateStarted).getTime() - new Date(b.dateStarted).getTime()
+  );
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
+      className="h-screen w-screen mb-20 flex relative flex-col overflow-scroll md:overflow-hidden text-left justify-start items-center"
+    >
+      <h3 className="section-heading mt-24 md:mt-0">
+        Experience
+      </h3>
+      <div className="flex flex-col w-full md:flex-row justify-center items-center md:space-y-0">
+        {orderedExperience.map((job) => (
+          <ExperienceCard key={job._id} job={job} />
+        ))}
+      </div>
+    </motion.div>
+  );
 }
 
-export default WorkExperience;
+export default WorkExperience
