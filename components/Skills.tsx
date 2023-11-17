@@ -18,7 +18,7 @@ type Props = {
 
 function Skills({ directionLeft, skills }: Props) {
 	const [filterSkillType, setFilterSkillskillType] = useState('all');
-
+	
 	// Function to handle button click
 	const handleFilterClick = (skillType: string) => {
 		setFilterSkillskillType(skillType);
@@ -72,11 +72,12 @@ function Skills({ directionLeft, skills }: Props) {
 				Tap skill button for skill name. Tap a filter button to show specific
 				skills.
 			</h5>
-			<div className='flex flex-wrap mb-2 justify-center'>
+			<div className='flex flex-wrap my-2 justify-center'>
 				{filterButtons.map((button, index) => (
 				
 					<button key={index}
-						className='skillFilterButton flex mb-4'
+						className={`flex mb-4 ${filterSkillType === button.skillType ? 'skillFilterButtonActive': 'skillFilterButton' }`}
+			
 						onClick={() => handleFilterClick(button.skillType)}
 					>
 						{React.createElement(button.icon, { className: 'mr-2' })}
