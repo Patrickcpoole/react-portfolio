@@ -145,7 +145,7 @@ function Projects({ projects }: Props) {
                                 />
                             ))}
                         </div>
-                        <p className='text-md mt-2 px-2'>{project.summary}</p>
+                        <p className='text-md mt-2 px-4'>{project.summary}</p>
                         <div className='flex justify-center items-center mt-10'>
                             <a href={project.linkToGithub}>
                                 <button className='projectButton'>
