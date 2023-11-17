@@ -74,11 +74,11 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
           <About pageInfo={pageInfo}/>
         </section>
   
-      <section id="experience" className='snap-start scroll-my-10'>
+      <section id="experience" className='snap-start scroll-my-20'>
         <WorkExperience experience={experience} />
       </section>
    
-       <section id="projects" className='snap-start scroll-my-10'>
+       <section id="projects" className='snap-start scroll-my-16'>
         <Projects projects={projects} />
       </section>
 
