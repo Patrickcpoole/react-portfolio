@@ -65,16 +65,16 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
       <Header socials={socials}/>
       
 
-      <section id='hero' className='snap-start'>
+      <section id='hero' className='snap-start '>
         <Hero pageInfo={pageInfo}  />
       </section>
 
      
-        <section id="about" className='snap-center'>
+        <section id="about" className='snap-start'>
           <About pageInfo={pageInfo}/>
         </section>
   
-      <section id="experience" className='snap-center'>
+      <section id="experience" className='snap-start '>
         <WorkExperience experience={experience} />
       </section>
    
