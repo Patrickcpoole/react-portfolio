@@ -97,7 +97,7 @@ function Projects({ projects }: Props) {
     return (
         <div
             ref={projectRef}
-            className='relative min-h-screen w-screen flex overflow-x-hidden flex-col text-left max-w-full justify-start mx-auto items-center z-0 overflow-y-scroll '
+            className='relative min-h-screen w-screen flex overflow-x-hidden md:overflow-hidden flex-col text-left max-w-full justify-start mx-auto items-center z-0 overflow-y-scroll '
         >
             <h3 className='section-heading'>Projects</h3>
             <h5 className='section-sub-heading md:hidden'>
@@ -114,14 +114,15 @@ function Projects({ projects }: Props) {
             )}
             <div
                 ref={scrollContainerRef}
-                className='relative w-[95%] flex snap-x snap-mandatory overflow-y-hidden pb-5'
+                className='relative h-screen w-[95%] flex snap-x snap-mandatory overflow-y-hidden pb-5 hide-scrollbar'
             >
                 {projects.map((project, key) => (
-									<div key={key} className='snap-center snap-always flex-shrink-0 w-full md:w-[40%] overflow-auto transition-transform duration-300 ease-in-out mx-10'>
+									<div key={key} className='snap-center snap-always flex-shrink-0 w-full overflow-x-hidden  flex flex-col 
+									justify-start items-center transition-transform duration-300 ease-in-out mx-10'>
                     <article
                         
-                        className='flex flex-col  items-center mt-6 rounded-md justify-start space-y-7 shadow-xl text-text 
-												text-center pb-5
+                        className='flex flex-col  items-center mt-12 rounded-md justify-start space-y-7 shadow-xl text-text md:w-[40%] 
+												text-center pb-5 
 												bg-card md:p-10 cursor-pointer hover:shadow-2xl'
                     >
                         <Image

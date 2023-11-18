@@ -14,11 +14,12 @@ function About({ pageInfo }: Props) {
 			whileInView={{ opacity: 1 }}
 			transition={{ duration: 1.5 }}
 			className='min-h-screen flex flex-col relative text-center 
-    md:text-left md:flex-row max-w-7xl px-10 justify-center mx-auto items-center '
+    md:text-left max-w-7xl px-10 justify-center mx-auto items-start'
 		>
-			<h3 className='section-heading'>
+			<h3 className='section-heading md:mt-0'>
 				About
 			</h3>
+			<div className='md:flex-row flex-col flex  justify-center  items-center w-full '>
 			<motion.img
 				initial={{
 					x: -200,
@@ -43,7 +44,9 @@ function About({ pageInfo }: Props) {
 				</h4>
 				<p className='text-base md:text-xl'>{pageInfo.about}</p>
 			</div>
+			</div>
 		</motion.div>
+		
 	);
 }
 

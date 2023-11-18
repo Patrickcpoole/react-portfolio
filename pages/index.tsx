@@ -54,7 +54,8 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
   //   };
   // }, []);
   return (
-    <div className="bg-primary text-text h-screen w-screen flex flex-col items-center snap-y snap-mandatory overscroll-none overflow-y-scroll touch-auto overflow-x-hidden scroll-smooth z-0 
+    <div className="bg-primary text-text h-screen w-screen
+    snap-y snap-mandatory overscroll-contain overflow-y-scroll overflow-x-hidden scroll-smooth z-0 
     md:scrollbar md:scrollbar-thumb-[#169137]/80 md:scrollbar-track-card">
       <Head>
         <title>Patricks portfolio</title>
@@ -65,35 +66,35 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
       <Header socials={socials}/>
       
  
-      <section id='hero' className='snap-start '>
-        <Hero pageInfo={pageInfo}  />
+      <section id='hero' className='snap-start'>
+        <Hero pageInfo={pageInfo} />
       </section>
 
      
-        <section id="about" className='snap-center  pb-[20dvh]'>
+        <section id="about" className='snap-center pb-[20dvh] md:pb-0'>
           <About pageInfo={pageInfo}/>
         </section>
   
-      <section id="experience" className='snap-start pt-[5dvh] pb-[50dvh]'>
+      <section id="experience" className='snap-start md:snap-always pt-[5dvh] md:pt-0 pb-[50dvh] md:pb-0'>
         <WorkExperience experience={experience} />
       </section>
    
-       <section id="projects" className='snap-start  pt-[5dvh] pb-[40dvh]'>
+       <section id="projects" className='snap-start  pt-[5dvh] md:pt-0 pb-[40dvh] md:pb-0 '>
         <Projects projects={projects} />
       </section>
 
    
-      <section id="skills" className='snap-start  pt-[5dvh] pb-[50dvh]' >
+      <section id="skills" className='snap-start  pt-[5dvh] md:pt-0 pb-[50dvh] md:pb-0' >
         <Skills skills={skills}/>
       </section>
      
     
-      <section id="contact" className='snap-start  pt-[5dvh]'>
+      <section id="contact" className='snap-start  pt-[5dvh] md:pt-0 md:pb-0'>
         <Contact pageInfo={pageInfo} />
       </section>
       <Link href="#hero" legacyBehavior>
         
-      <footer className='hidden md:sticky bottom-5 w-full cursor-pointer'>
+      <footer className='hidden sticky md:block bottom-5 w-full cursor-pointer'>
         <div className='flex items-center justify-center'>
         <ArrowUpCircleIcon className="h-8 w-8 md:h-6 md:w-6" style={{color: '#169137'}}/>
         </div>

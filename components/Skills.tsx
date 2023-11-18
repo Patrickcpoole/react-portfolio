@@ -58,7 +58,7 @@ function Skills({ directionLeft, skills }: Props) {
 
 	return (
 		<motion.div
-			className='flex flex-col text-center md:text-left min-h-screen xl:px-10 justify-start xl:space-y-0 mx-auto items-center '
+			className='flex flex-col text-center md:text-left min-h-screen justify-start  mx-auto items-center '
 		>
 			<h3 className='section-heading'>
 				Skills
@@ -71,7 +71,7 @@ function Skills({ directionLeft, skills }: Props) {
 				Tap skill button for skill name. Tap a filter button to show specific
 				skills.
 			</h5>
-			<div className='flex flex-wrap my-2 justify-center'>
+			<div className='md:hidden flex flex-wrap my-8 justify-center md:flex-nowrap'>
 				{filterButtons.map((button, index) => (
 				
 					<button key={index}
@@ -85,6 +85,20 @@ function Skills({ directionLeft, skills }: Props) {
         : index === 4 // Index of 'CSS Frameworks'
         ? 'VCS' // Abbreviation for 'CSS Frameworks'
         : button.label}
+					</button>
+			
+				))}
+			</div>
+			<div className='hidden md:flex flex-wrap my-4 justify-center md:flex-nowrap'>
+				{filterButtons.map((button, index) => (
+				
+					<button key={index}
+						className={`flex mb-4 ${filterSkillType === button.skillType ? 'skillFilterButtonActive': 'skillFilterButton' }`}
+			
+						onClick={() => handleFilterClick(button.skillType)}
+					>
+						{React.createElement(button.icon, { className: 'mr-2' })}
+						{button.label}
 					</button>
 			
 				))}
