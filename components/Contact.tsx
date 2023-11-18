@@ -24,7 +24,7 @@ function Contact({pageInfo}: Props) {
 	return (
 		<div
 			className='w-screen flex relative flex-col text-center 
-    max-w-7xl justify-start mx-auto items-center mb-16'
+    max-w-7xl justify-start mx-auto items-center my-[15%]'
 		>
 			<h3 className='section-heading mt-20'>
 				Contact
