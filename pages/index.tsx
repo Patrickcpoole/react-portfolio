@@ -26,33 +26,33 @@ type Props = {
 }
 
 const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials }) => {
-  useEffect(() => {
-    let timer: NodeJS.Timeout;
+  // useEffect(() => {
+  //   let timer: NodeJS.Timeout;
 
-    const container = document.querySelector('.custom-scrollbar');
+  //   const container = document.querySelector('.custom-scrollbar');
 
   
-    const handleScroll = () => {
-      if (container) {
-        container.classList.add('scrolling');
-        clearTimeout(timer);
+  //   const handleScroll = () => {
+  //     if (container) {
+  //       container.classList.add('scrolling');
+  //       clearTimeout(timer);
 
-        timer = setTimeout(() => {
-          container.classList.remove('scrolling');
-        }, 2000); // Adjust the delay as needed
-      }
-    };
+  //       timer = setTimeout(() => {
+  //         container.classList.remove('scrolling');
+  //       }, 2000); // Adjust the delay as needed
+  //     }
+  //   };
 
-    if (container) {
-      container.addEventListener('scroll', handleScroll);
-    }
+  //   if (container) {
+  //     container.addEventListener('scroll', handleScroll);
+  //   }
 
-    return () => {
-      if (container) {
-        container.removeEventListener('scroll', handleScroll);
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (container) {
+  //       container.removeEventListener('scroll', handleScroll);
+  //     }
+  //   };
+  // }, []);
   return (
     <div className="bg-primary text-text h-screen w-screen flex flex-col items-center snap-y snap-mandatory overscroll-contain overflow-y-scroll touch-auto overflow-x-hidden scroll-smooth z-0 
     md:scrollbar md:scrollbar-thumb-[#169137]/80 md:scrollbar-track-card">
