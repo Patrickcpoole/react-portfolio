@@ -58,8 +58,7 @@ function Skills({ directionLeft, skills }: Props) {
 
 	return (
 		<motion.div
-			className='flex flex-col text-center md:text-left min-h-screen
-    max-w-[2000px] xl:px-10 justify-start xl:space-y-0 mx-auto items-center mb-16'
+			className='flex flex-col text-center md:text-left min-h-screen xl:px-10 justify-start xl:space-y-0 mx-auto items-center mb-20'
 		>
 			<h3 className='section-heading mt-20'>
 				Skills

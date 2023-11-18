@@ -10,7 +10,7 @@ type Props = {
 
 function Header({ socials }: Props) {
 	return (
-		<header className='sticky top-0 p-5 flex items-center justify-between max-w-7xl mx-auto z-50 bg-transparent'>
+		<header className='sticky top-[1%] p-5 flex items-center justify-between max-w-7xl mx-auto z-50 bg-transparent'>
 			<motion.div
 				initial={{
 					x: -500,
