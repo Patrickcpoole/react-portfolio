@@ -26,35 +26,35 @@ type Props = {
 }
 
 const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials }) => {
-  useEffect(() => {
-    let timer: NodeJS.Timeout;
+  // useEffect(() => {
+  //   let timer: NodeJS.Timeout;
 
-    const container = document.querySelector('.custom-scrollbar');
+  //   const container = document.querySelector('.custom-scrollbar');
 
   
-    const handleScroll = () => {
-      if (container) {
-        container.classList.add('scrolling');
-        clearTimeout(timer);
+  //   const handleScroll = () => {
+  //     if (container) {
+  //       container.classList.add('scrolling');
+  //       clearTimeout(timer);
 
-        timer = setTimeout(() => {
-          container.classList.remove('scrolling');
-        }, 2000); // Adjust the delay as needed
-      }
-    };
+  //       timer = setTimeout(() => {
+  //         container.classList.remove('scrolling');
+  //       }, 2000); // Adjust the delay as needed
+  //     }
+  //   };
 
-    if (container) {
-      container.addEventListener('scroll', handleScroll);
-    }
+  //   if (container) {
+  //     container.addEventListener('scroll', handleScroll);
+  //   }
 
-    return () => {
-      if (container) {
-        container.removeEventListener('scroll', handleScroll);
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (container) {
+  //       container.removeEventListener('scroll', handleScroll);
+  //     }
+  //   };
+  // }, []);
   return (
-    <div className="bg-primary text-text h-screen w-screen flex flex-col items-center snap-y snap-mandatory overflow-y-scroll overflow-x-hidden scroll-smooth z-0 
+    <div className="bg-primary text-text h-screen w-screen flex flex-col items-center snap-y snap-mandatory overscroll-none overflow-y-scroll touch-auto overflow-x-hidden scroll-smooth z-0 
     md:scrollbar md:scrollbar-thumb-[#169137]/80 md:scrollbar-track-card">
       <Head>
         <title>Patricks portfolio</title>
@@ -64,36 +64,36 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
   
       <Header socials={socials}/>
       
-
-      <section id='hero' className='snap-start'>
+ 
+      <section id='hero' className='snap-start '>
         <Hero pageInfo={pageInfo}  />
       </section>
 
      
-        <section id="about" className='snap-center'>
+        <section id="about" className='snap-center  pb-[20dvh]'>
           <About pageInfo={pageInfo}/>
         </section>
   
-      <section id="experience" className='snap-center'>
+      <section id="experience" className='snap-start pt-[5dvh] pb-[50dvh]'>
         <WorkExperience experience={experience} />
       </section>
    
-       <section id="projects" className='snap-start'>
+       <section id="projects" className='snap-start  pt-[5dvh] pb-[40dvh]'>
         <Projects projects={projects} />
       </section>
 
    
-      <section id="skills" className='snap-start' >
+      <section id="skills" className='snap-start  pt-[5dvh] pb-[50dvh]' >
         <Skills skills={skills}/>
       </section>
      
     
-      <section id="contact" className='snap-start'>
+      <section id="contact" className='snap-start  pt-[5dvh]'>
         <Contact pageInfo={pageInfo} />
       </section>
       <Link href="#hero" legacyBehavior>
         
-      <footer className='sticky bottom-5 w-full cursor-pointer'>
+      <footer className='hidden md:sticky bottom-5 w-full cursor-pointer'>
         <div className='flex items-center justify-center'>
         <ArrowUpCircleIcon className="h-8 w-8 md:h-6 md:w-6" style={{color: '#169137'}}/>
         </div>

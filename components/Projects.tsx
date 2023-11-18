@@ -29,7 +29,7 @@ function Projects({ projects }: Props) {
 							});
 							// Scroll back to the top after the animation completes
 							setTimeout(() => {
-									container.scrollTop = 0;
+									
 									setIsScrolling(false);
 							}, 300);
 					}
@@ -97,9 +97,9 @@ function Projects({ projects }: Props) {
     return (
         <div
             ref={projectRef}
-            className='relative w-screen flex overflow-x-hidden flex-col text-left max-w-full justify-start mx-auto items-center z-0 overflow-y-scroll mb-14'
+            className='relative min-h-screen w-screen flex overflow-x-hidden flex-col text-left max-w-full justify-start mx-auto items-center z-0 overflow-y-scroll '
         >
-            <h3 className='section-heading mt-20'>Projects</h3>
+            <h3 className='section-heading'>Projects</h3>
             <h5 className='section-sub-heading md:hidden'>
                 Swipe cards to view more
             </h5>
@@ -114,10 +114,10 @@ function Projects({ projects }: Props) {
             )}
             <div
                 ref={scrollContainerRef}
-                className='relative w-[95%] flex snap-x snap-mandatory overflow-y-hidden'
+                className='relative w-[95%] flex snap-x snap-mandatory overflow-y-hidden pb-5'
             >
                 {projects.map((project, key) => (
-									<div key={key} className='snap-center flex-shrink-0 w-full md:w-[40%] overflow-auto transition-transform duration-300 ease-in-out mx-10 mb-4'>
+									<div key={key} className='snap-center snap-always flex-shrink-0 w-full md:w-[40%] overflow-auto transition-transform duration-300 ease-in-out mx-10'>
                     <article
                         
                         className='flex flex-col  items-center mt-6 rounded-md justify-start space-y-7 shadow-xl text-text 
@@ -145,7 +145,7 @@ function Projects({ projects }: Props) {
                                 />
                             ))}
                         </div>
-                        <p className='text-md mt-2 px-2'>{project.summary}</p>
+                        <p className='text-md mt-2 px-4'>{project.summary}</p>
                         <div className='flex justify-center items-center mt-10'>
                             <a href={project.linkToGithub}>
                                 <button className='projectButton'>

@@ -18,7 +18,7 @@ type Props = {
 
 function Skills({ directionLeft, skills }: Props) {
 	const [filterSkillType, setFilterSkillskillType] = useState('all');
-
+	
 	// Function to handle button click
 	const handleFilterClick = (skillType: string) => {
 		setFilterSkillskillType(skillType);
@@ -58,10 +58,9 @@ function Skills({ directionLeft, skills }: Props) {
 
 	return (
 		<motion.div
-			className='flex flex-col text-center md:text-left 
-    max-w-[2000px] xl:px-10 justify-start xl:space-y-0 mx-auto items-center mb-16'
+			className='flex flex-col text-center md:text-left min-h-screen xl:px-10 justify-start xl:space-y-0 mx-auto items-center '
 		>
-			<h3 className='section-heading mt-20'>
+			<h3 className='section-heading'>
 				Skills
 			</h3>
 			<h5 className='hidden md:block section-sub-heading'>
@@ -72,11 +71,12 @@ function Skills({ directionLeft, skills }: Props) {
 				Tap skill button for skill name. Tap a filter button to show specific
 				skills.
 			</h5>
-			<div className='flex flex-wrap mb-2 justify-center'>
+			<div className='flex flex-wrap my-2 justify-center'>
 				{filterButtons.map((button, index) => (
 				
 					<button key={index}
-						className='skillFilterButton flex mb-4'
+						className={`flex mb-4 ${filterSkillType === button.skillType ? 'skillFilterButtonActive': 'skillFilterButton' }`}
+			
 						onClick={() => handleFilterClick(button.skillType)}
 					>
 						{React.createElement(button.icon, { className: 'mr-2' })}
@@ -92,7 +92,7 @@ function Skills({ directionLeft, skills }: Props) {
 			<motion.div
 				initial={{ x: directionLeft ? '-100%' : '100%', opacity: 0 }}
 				animate={controls}
-				className={`${containerClass} `}
+				className={`${containerClass}`}
 			>
 				{filteredSkills.map((skill) => (
 					<Skill key={skill._id} skill={skill} />

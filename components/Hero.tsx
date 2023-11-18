@@ -17,7 +17,7 @@ function Hero({ pageInfo }: Props) {
 		delaySpeed: 1000,
 	});
 	return (
-		<div className='h-screen flex flex-col items-center justify-center text-center overflow-hidden'>
+		<div className='h-screen flex flex-col items-center justify-center text-center overflow-hidden mt-[10%]'>
 			<BackgroundCircles />
 			<Image
 				width={600}
@@ -27,7 +27,7 @@ function Hero({ pageInfo }: Props) {
 				src={urlFor(pageInfo.heroImage).url()}
 			/>
 			<div className='z-20'>
-				<h2 className='text-md md:text-sm uppercase text-heading pb-2 md:tracking-[15px] tracking-[5px] my-5'>
+				<h2 className='text-md md:text-sm uppercase text-heading pb-2 md:tracking-[15px] tracking-[5px] '>
 					{pageInfo.role}
 				</h2>
 				<div className='w-full h-40 '>
@@ -39,7 +39,7 @@ function Hero({ pageInfo }: Props) {
 
 				<div className='flex flex-wrap justify-center items-center mt-5'>
 					<Link href='#about'>
-						<button className='heroButton'>About</button>
+						<button className='heroButton'>Abouts</button>
 					</Link>
 					<Link href='#experience'>
 						<button className='heroButton'>Experience</button>
