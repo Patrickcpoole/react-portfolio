@@ -58,7 +58,7 @@ function Skills({ directionLeft, skills }: Props) {
 
 	return (
 		<motion.div
-			className='flex flex-col text-center md:text-left min-h-screen xl:px-10 justify-start xl:space-y-0 mx-auto items-center  mt-[10%] '
+			className='flex flex-col text-center md:text-left min-h-screen xl:px-10 justify-start xl:space-y-0 mx-auto items-center '
 		>
 			<h3 className='section-heading'>
 				Skills
@@ -92,7 +92,7 @@ function Skills({ directionLeft, skills }: Props) {
 			<motion.div
 				initial={{ x: directionLeft ? '-100%' : '100%', opacity: 0 }}
 				animate={controls}
-				className={`${containerClass} mb-[25%]`}
+				className={`${containerClass}`}
 			>
 				{filteredSkills.map((skill) => (
 					<Skill key={skill._id} skill={skill} />

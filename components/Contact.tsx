@@ -23,10 +23,10 @@ function Contact({pageInfo}: Props) {
 	};
 	return (
 		<div
-			className='w-screen flex relative flex-col text-center 
-    max-w-7xl justify-start mx-auto items-center my-[15%]'
+			className='w-screen min-h-screen flex relative flex-col text-center 
+    max-w-7xl justify-start mx-auto items-center'
 		>
-			<h3 className='section-heading mt-20'>
+			<h3 className='section-heading '>
 				Contact
 			</h3>
 			<div className='flex flex-col mt-12 w-full'>
