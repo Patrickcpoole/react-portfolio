@@ -64,31 +64,31 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
   
       <Header socials={socials}/>
       
-      touch-pan-y
+ 
       <section id='hero' className='snap-start '>
         <Hero pageInfo={pageInfo}  />
       </section>
 
      
-        <section id="about" className='snap-center py-[10dvh] '>
+        <section id="about" className='snap-center scroll-py-[10dvh] py-[10dvh]'>
           <About pageInfo={pageInfo}/>
         </section>
   
-      <section id="experience" className='snap-start py-[10dvh]'>
+      <section id="experience" className='snap-start scroll-pt-[10dvh] scroll-pb-[20dvh] pt-[10dvh] pb-[20dvh]'>
         <WorkExperience experience={experience} />
       </section>
    
-       <section id="projects" className='snap-start  py-[10dvh]'>
+       <section id="projects" className='snap-start  scroll-pt-[10dvh] scroll-pb-[20dvh] pt-[10dvh] pb-[20dvh]'>
         <Projects projects={projects} />
       </section>
 
    
-      <section id="skills" className='snap-start py-[10dvh]' >
+      <section id="skills" className='snap-start scroll-pt-[10dvh] scroll-pb-[20dvh] pt-[10dvh] pb-[20dvh]' >
         <Skills skills={skills}/>
       </section>
      
     
-      <section id="contact" className='snap-start py-[10dvh]'>
+      <section id="contact" className='snap-start scroll-py-[10dvh] py-[10dvh]'>
         <Contact pageInfo={pageInfo} />
       </section>
       <Link href="#hero" legacyBehavior>
