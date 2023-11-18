@@ -39,7 +39,7 @@ function Hero({ pageInfo }: Props) {
 
 				<div className='flex flex-wrap justify-center items-center mt-5'>
 					<Link href='#about'>
-						<button className='heroButton'>About</button>
+						<button className='heroButton'>Abouts</button>
 					</Link>
 					<Link href='#experience'>
 						<button className='heroButton'>Experience</button>
