@@ -54,7 +54,7 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
   //   };
   // }, []);
   return (
-    <div className="bg-primary text-text h-screen w-screen flex flex-col items-center snap-y snap-mandatory overscroll-contain overflow-y-scroll touch-auto overflow-x-hidden scroll-smooth z-0 
+    <div className="bg-primary text-text h-screen w-screen flex flex-col items-center snap-y snap-mandatory overscroll-none overflow-y-scroll touch-auto overflow-x-hidden scroll-smooth z-0 
     md:scrollbar md:scrollbar-thumb-[#169137]/80 md:scrollbar-track-card">
       <Head>
         <title>Patricks portfolio</title>
@@ -70,25 +70,25 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
       </section>
 
      
-        <section id="about" className='snap-center touch-pan-y py-[20dvh] '>
+        <section id="about" className='snap-center py-[10dvh] '>
           <About pageInfo={pageInfo}/>
         </section>
   
-      <section id="experience" className='snap-start touch-pan-y py-[20dvh]'>
+      <section id="experience" className='snap-start py-[10dvh]'>
         <WorkExperience experience={experience} />
       </section>
    
-       <section id="projects" className='snap-start touch-pan-y py-[20dvh]'>
+       <section id="projects" className='snap-start  py-[10dvh]'>
         <Projects projects={projects} />
       </section>
 
    
-      <section id="skills" className='snap-start touch-pan-y py-[20dvh]' >
+      <section id="skills" className='snap-start py-[10dvh]' >
         <Skills skills={skills}/>
       </section>
      
     
-      <section id="contact" className='snap-start touch-pan-y py-[20dvh]'>
+      <section id="contact" className='snap-start py-[10dvh]'>
         <Contact pageInfo={pageInfo} />
       </section>
       <Link href="#hero" legacyBehavior>
