@@ -65,7 +65,7 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
       <Header socials={socials}/>
       
 
-      <section id='hero' className='snap-center'>
+      <section id='hero' className='snap-start'>
         <Hero pageInfo={pageInfo}  />
       </section>
 
@@ -74,21 +74,21 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
           <About pageInfo={pageInfo}/>
         </section>
   
-      <section id="experience" className='snap-center'>
+      <section id="experience" className='snap-start'>
         <WorkExperience experience={experience} />
       </section>
    
-       <section id="projects" className='snap-center'>
+       <section id="projects" className='snap-start'>
         <Projects projects={projects} />
       </section>
 
    
-      <section id="skills" className='snap-center' >
+      <section id="skills" className='snap-start' >
         <Skills skills={skills}/>
       </section>
      
     
-      <section id="contact" className='snap-center'>
+      <section id="contact" className='snap-start'>
         <Contact pageInfo={pageInfo} />
       </section>
       <Link href="#hero" legacyBehavior>
