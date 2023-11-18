@@ -13,8 +13,6 @@
     @apply relative uppercase pl-3 tracking-[0.5em] md:tracking-[0.75em] text-heading text-2xl mx-auto mt-[15%]
   }
 
-
-
   .section-sub-heading {
     @apply relative my-4 uppercase pl-3 text-heading text-xs md:text-sm text-center mb-4 mx-auto tracking-[0.25em]
   }
@@ -41,12 +39,42 @@
     @apply outline-none bg-card rounded-sm border-b px-4 py-4 border-primary w-full
     text-text placeholder-heading transition-all focus:border-[#169137]/40 focus:text-text;
   }
+
+  @keyframes ping {
+    75%, 100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  
+  .animate-ping-custom {
+    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
  
 
   /* Responsive styles for small screens */
   @screen md {
+    .section-heading {
+      @apply relative uppercase pl-3 tracking-[0.5em] md:tracking-[0.75em] text-heading text-2xl mx-auto mt-[7.5%]
+    }
+
+    .hide-scrollbar {
+      scrollbar-width: thin; /* Firefox */
+      -ms-overflow-style: none; /* Internet Explorer 11 */
+      overflow: scroll;
+  }
+  
+  /* For WebKit browsers (Chrome, Safari) */
+  .hide-scrollbar::-webkit-scrollbar {
+      width: 0.5rem;
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar-thumb {
+      background-color: transparent;
+  }
+
     .heroButton {
-      @apply px-6 mx-5 py-2 border border-primary rounded-full uppercase text-xs tracking-widest text-heading
+      @apply px-6 mx-5 py-2 border bg-transparent rounded-full uppercase text-xs tracking-widest text-heading
     transition-all hover:border-[#169137]/40 hover:text-[#FFF] hover:bg-[#169137]/40;
       
     }
@@ -57,22 +85,23 @@
     }
 
     .skillFilterButton {
-      @apply border-[#169137]/40 text-text bg-[#169137]/40;
+      @apply border-[#169137]/40 bg-card mx-2 px-8 py-3 border w-auto
+      border-primary rounded-full uppercase tracking-widest text-text
+      transition-all justify-center items-center;
+    }
+  
+    .skillFilterButtonActive {
+      @apply border-[#169137]/40 bg-[#169137] px-6 mx-1 py-2 border w-auto
+      border-primary rounded-full uppercase  tracking-widest text-text
+      transition-all justify-center items-center;
     }
 
     .contactInput {
-      @apply outline-none bg-card rounded-sm border-b px-10 py-4 border-primary
+      @apply outline-none bg-card rounded-sm border-b px-10 py-4 border-primary w-full
       text-text placeholder-heading transition-all focus:border-[#169137]/40 focus:text-text;
     }
   }
 
   /* Responsive styles for medium screens */
-  @screen md {
-    /* Add styles for medium screens if needed */
-  }
 
-  /* Responsive styles for large screens */
-  @screen lg {
-    /* Add styles for large screens if needed */
-  }
 }

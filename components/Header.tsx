@@ -10,7 +10,7 @@ type Props = {
 
 function Header({ socials }: Props) {
 	return (
-		<header className='sticky top-[1%] p-5 flex items-center justify-between max-w-7xl mx-auto z-50 bg-transparent'>
+		<header className='sticky top-[1%] p-5 flex items-center justify-between max-w-7xl mx-auto z-50 md:w-screen'>
 			<motion.div
 				initial={{
 					x: -500,
@@ -25,10 +25,10 @@ function Header({ socials }: Props) {
 				transition={{
 					duration: 1.5,
 				}}
-				className='flex flex-row items-center'
+				className='flex flex-row items-center md:justify-around'
 			>
 				{socials.map((social, index) => (
-					<div key={index} className="mx-1">
+					<div key={index} className="mx-1 ">
 						<a href={social.url} target='_blank' rel='noopener noreferrer'>
 							{social.title === 'Github' ? (
 								<FaGithub

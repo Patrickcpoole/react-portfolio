@@ -16,7 +16,7 @@ function ExperienceCard({ job }: Props) {
   return (
     <a href={job.linkToWebsite} rel="noopener noreferrer" target="_blank">
       <article
-        className="mt-5 flex flex-col rounded-md items-center space-y-7 flex-shrink-0 mx-auto shadow-xl text-text md:h-[600px]
+        className="mt-5 flex flex-col rounded-md items-center space-y-7 flex-shrink-0 mx-auto shadow-xl text-text 
           snap-center w-11/12 md:max-w-[800px] text-center
           bg-card p-5 pb-12 md:p-10 cursor-pointer overflow-hidden hover:shadow-2xl transition-transform duration-300 ease-in-out"
       >
