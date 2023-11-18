@@ -54,7 +54,7 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
     };
   }, []);
   return (
-    <div className="bg-primary text-text h-screen w-screen flex flex-col items-center snap-y snap-mandatory overscroll-contain overflow-y-scroll overflow-x-hidden scroll-smooth z-0 
+    <div className="bg-primary text-text h-screen w-screen flex flex-col items-center snap-y snap-mandatory overscroll-contain overflow-y-scroll touch-auto overflow-x-hidden scroll-smooth z-0 
     md:scrollbar md:scrollbar-thumb-[#169137]/80 md:scrollbar-track-card">
       <Head>
         <title>Patricks portfolio</title>
