@@ -70,25 +70,25 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
       </section>
 
      
-        <section id="about" className='snap-center touch-pan-y py-[10dvh]'>
+        <section id="about" className='snap-center touch-pan-y py-[10dvh] overscroll-none'>
           <About pageInfo={pageInfo}/>
         </section>
   
-      <section id="experience" className='snap-start touch-pan-y py-[10dvh]'>
+      <section id="experience" className='snap-start touch-pan-y py-[10dvh] overscroll-none'>
         <WorkExperience experience={experience} />
       </section>
    
-       <section id="projects" className='snap-start touch-pan-y py-[10dvh]'>
+       <section id="projects" className='snap-start touch-pan-y py-[10dvh] overscroll-none'>
         <Projects projects={projects} />
       </section>
 
    
-      <section id="skills" className='snap-start touch-pan-y py-[10dvh]' >
+      <section id="skills" className='snap-start touch-pan-y py-[10dvh] overscroll-none' >
         <Skills skills={skills}/>
       </section>
      
     
-      <section id="contact" className='snap-start touch-pan-y py-[10dvh]]'>
+      <section id="contact" className='snap-start touch-pan-y py-[10dvh] overscroll-none'>
         <Contact pageInfo={pageInfo} />
       </section>
       <Link href="#hero" legacyBehavior>
