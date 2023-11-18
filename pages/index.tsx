@@ -78,17 +78,17 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
         <WorkExperience experience={experience} />
       </section>
    
-       <section id="projects" className='snap-start  pt-[20dvh] pb-[50dvh]'>
+       <section id="projects" className='snap-start  pt-[10dvh] pb-[40dvh]'>
         <Projects projects={projects} />
       </section>
 
    
-      <section id="skills" className='snap-start  pt-[20dvh] pb-[50dvh]' >
+      <section id="skills" className='snap-start  pt-[10dvh] pb-[50dvh]' >
         <Skills skills={skills}/>
       </section>
      
     
-      <section id="contact" className='snap-start  py-[10dvh]'>
+      <section id="contact" className='snap-start  pt-[5dvh]'>
         <Contact pageInfo={pageInfo} />
       </section>
       <Link href="#hero" legacyBehavior>

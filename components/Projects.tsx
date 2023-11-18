@@ -117,7 +117,7 @@ function Projects({ projects }: Props) {
                 className='relative w-[95%] flex snap-x snap-mandatory overflow-y-hidden pb-5'
             >
                 {projects.map((project, key) => (
-									<div key={key} className='snap-center flex-shrink-0 w-full md:w-[40%] overflow-auto transition-transform duration-300 ease-in-out mx-10'>
+									<div key={key} className='snap-center snap-always flex-shrink-0 w-full md:w-[40%] overflow-auto transition-transform duration-300 ease-in-out mx-10'>
                     <article
                         
                         className='flex flex-col  items-center mt-6 rounded-md justify-start space-y-7 shadow-xl text-text 
