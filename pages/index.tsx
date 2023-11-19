@@ -89,7 +89,7 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
       </section>
      
     
-      <section id="contact" className='snap-start  pt-[5dvh] md:pt-0 md:pb-0'>
+      <section id="contact" className='snap-start pb-[10dvh] pt-[5dvh] md:pt-0 md:pb-0'>
         <Contact pageInfo={pageInfo} />
       </section>
       <Link href="#hero" legacyBehavior>
