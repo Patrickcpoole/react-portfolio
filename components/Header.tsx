@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaFile } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Social } from '../typings';
@@ -10,7 +10,7 @@ type Props = {
 
 function Header({ socials }: Props) {
 	return (
-		<header className='sticky top-[1%] p-5 flex items-center justify-between max-w-7xl mx-auto z-50 md:w-screen'>
+		<header className='sticky top-[1%] p-5 flex items-center justify-between max-w-7xl mx-auto z-50 md:w-screen '>
 			<motion.div
 				initial={{
 					x: -500,
@@ -45,7 +45,7 @@ function Header({ socials }: Props) {
 					</div>
 				))}
 			</motion.div>
-			<Link href='#contact' legacyBehavior>
+		
 				<motion.div
 					initial={{
 						x: 500,
@@ -60,9 +60,23 @@ function Header({ socials }: Props) {
 					transition={{
 						duration: 1.5,
 					}}
-					className='flex flex-row items-center text-heading cursor-pointer'
+					className='flex items-center flex-nowrap text-heading cursor-pointer '
 				>
-					<div className='flex group'>
+						<a href="https://amplify-venu20-dev-131644-deployment.s3.amazonaws.com/Patrick+Poole+Resume.pdf" target="_blank" rel="noopener noreferrer">
+					<div className='w-auto flex md:mr-4  ' >
+				
+						<FaFile
+							className='text-heading mr-3 group-hover:text-accent'
+							size={'1.5em'}
+						/>
+						<p className='uppercase hidden md:inline-flex text-sm text-heading group-hover:text-accent'>
+							Resume
+						</p>
+						
+					</div>
+					</a>
+					<Link href='#contact' legacyBehavior>
+					<div className='flex w-auto md:ml-4'>
 						<FaEnvelope
 							className='text-heading mr-3 group-hover:text-accent'
 							size={'1.5em'}
@@ -71,8 +85,9 @@ function Header({ socials }: Props) {
 							Get In Touch
 						</p>
 					</div>
+					</Link>
 				</motion.div>
-			</Link>
+		
 		</header>
 	);
 }
