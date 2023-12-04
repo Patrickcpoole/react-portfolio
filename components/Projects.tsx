@@ -123,7 +123,7 @@ function Projects({ projects }: Props) {
                         
                         className='flex flex-col  items-center mt-12 rounded-md justify-start space-y-7 shadow-xl text-text md:w-[40%] 
 												text-center pb-5 
-												bg-card md:p-10 cursor-pointer hover:shadow-2xl'
+												bg-card md:p-10 hover:shadow-2xl'
                     >
                         <Image
                             height={1200}
@@ -148,13 +148,13 @@ function Projects({ projects }: Props) {
                         </div>
                         <p className='text-md mt-2 px-4'>{project.summary}</p>
                         <div className='flex justify-center items-center mt-10'>
-                            <a href={project.linkToGithub}>
+                            <a href={project.linkToGithub} target='_blank' rel='noreferrer'>
                                 <button className='projectButton'>
                                     <FaGithub className='mr-2' />
                                     View Github
                                 </button>
                             </a>
-                            <a href={project.linkToBuild}>
+                            <a href={project.linkToBuild} target='_blank' rel='noreferrer'>
                                 <button className='projectButton flex'>
                                     <FaMobile className='mr-2' />
                                     View Demo
