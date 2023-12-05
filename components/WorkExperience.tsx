@@ -18,12 +18,12 @@ function WorkExperience({ experience }: Props) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
-      className="w-screen  min-h-screen flex relative flex-col overflow-hidden md:overflow-hidden text-left justify-start items-center "
+      className="w-screen  min-h-screen flex relative flex-col overflow-hidden md:overflow-hidden text-left justify-start items-center  "
     >
       <h3 className="section-heading">
         Experience
       </h3>
-      <div className="flex flex-col w-full md:flex-row justify-center items-center mt-6 ">
+      <div className="flex flex-col w-full xl:flex-row justify-center items-center mt-6 ">
         {orderedExperience.map((job) => (
           <ExperienceCard key={job._id} job={job} />
         ))}

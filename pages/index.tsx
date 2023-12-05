@@ -71,20 +71,20 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
       </section>
 
      
-        <section id="about" className='snap-center pb-[20dvh] md:pb-0'>
+        <section id="about" className='snap-center pb-[20dvh] md:pb-0 '>
           <About pageInfo={pageInfo}/>
         </section>
   
-      <section id="experience" className='snap-start md:snap-always pt-[5dvh] md:pt-0 pb-[50dvh] md:pb-0'>
+      <section id="experience" className='snap-start md:snap-always pt-[5dvh] md:pt-0 pb-[50dvh] md:pb-[10dvh] lg:pb-0'>
         <WorkExperience experience={experience} />
       </section>
    
-       <section id="projects" className='snap-start  pt-[5dvh] md:pt-0 pb-[40dvh] md:pb-0 '>
+       <section id="projects" className='snap-start  pt-[5dvh] md:pt-0 pb-[40dvh] md:pb-[10dvh] lg:pb-0'>
         <Projects projects={projects} />
       </section>
 
    
-      <section id="skills" className='snap-start  pt-[5dvh] md:pt-0 pb-[50dvh] md:pb-0' >
+      <section id="skills" className='snap-start  pt-[5dvh] md:pt-0 pb-[50dvh] md:pb-[10dvh] lg:pb-0' >
         <Skills skills={skills}/>
       </section>
      

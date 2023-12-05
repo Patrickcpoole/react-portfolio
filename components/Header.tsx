@@ -63,7 +63,7 @@ function Header({ socials }: Props) {
 					className='flex items-center flex-nowrap text-heading cursor-pointer '
 				>
 						<a href="https://amplify-venu20-dev-131644-deployment.s3.amazonaws.com/Patrick+Poole+Resume.pdf" target="_blank" rel="noopener noreferrer">
-					<div className='w-auto flex md:mr-4  ' >
+					<div className='w-auto flex md:mr-4  group' >
 				
 						<FaFile
 							className='text-heading mr-3 group-hover:text-accent'
@@ -76,7 +76,7 @@ function Header({ socials }: Props) {
 					</div>
 					</a>
 					<Link href='#contact' legacyBehavior>
-					<div className='flex w-auto md:ml-4'>
+					<div className='flex w-auto md:ml-4 group '>
 						<FaEnvelope
 							className='text-heading mr-3 group-hover:text-accent'
 							size={'1.5em'}
