@@ -14,6 +14,9 @@ Welcome to my developer portfolio! This website showcases information about me a
 - [Contact Information](#contact-information)
 - [Conclusion](#conclusion)
 
+### Deployment Status
+[![Vercel](https://vercel.com/patrickcpoole/react-portfolio/badge.svg)](https://vercel.com/patrickcpoole/react-portfolio)
+
 ### Main Features
 - **About Me:** Learn more about my background and skills.
 - **Experience:** Explore my professional experience in web development.
