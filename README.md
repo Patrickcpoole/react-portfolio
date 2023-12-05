@@ -15,7 +15,7 @@ Welcome to my developer portfolio! This website showcases information about me a
 - [Conclusion](#conclusion)
 
 ### Deployment Status
-![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app={react-portfolio})
+![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app={vercel.com/patrickcpoole/react-portfolio})
 
 ### Main Features
 - **About Me:** Learn more about my background and skills.
