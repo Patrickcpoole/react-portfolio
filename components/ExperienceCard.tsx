@@ -53,7 +53,7 @@ function ExperienceCard({ job }: Props) {
           {job.dateEnded ? (
             <p className="uppercase mb-5 text-text text-xs ">Ended: {job.dateEnded}</p>
           ) : (
-            <p className="uppercase mb-5 text-text text-sm">Current Job</p>
+            <p className="uppercase mb-5 text-text text-xs">Current Job</p>
           )}
           <ul className="list-disc space-y-4 text-md px-6 lg:px-4  text-left">
             {job.points.map((point, index) => (
