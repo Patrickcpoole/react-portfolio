@@ -1,34 +1,66 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Patrick Poole's Developer Portfolio
 
-## Getting Started
+Welcome to my developer portfolio! This website showcases information about me as a developer, my experience in web development, side projects, and my skills.
 
-First, run the development server:
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Contributing](#contributing)
+- [Testing](#testing)
+- [Dependencies](#dependencies)
+- [Contact Information](#contact-information)
+- [Screenshots](#screenshots)
+- [Demos or Live Links](#demos-or-live-links)
+- [Conclusion](#conclusion)
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+## Installation
+Provide instructions on how to install and set up the project.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Usage
+Explain how to use the website and highlight its main features. Include code snippets or examples.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Features
+List and describe the key features of the website.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+## Technologies Used
+- Next.js
+- Framer Motion
+- Other libraries and styles
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Contributing
+This project is not open for contributions.
 
-## Learn More
+## Testing
+Testing is not implemented yet but will be using Jest.
 
-To learn more about Next.js, take a look at the following resources:
+## Dependencies
+```json {
+    "@emailjs/browser": "^3.11.0",
+    "@heroicons/react": "^2.0.13",
+    "@portabletext/react": "^2.0.3",
+    "@sanity/image-url": "^1.0.2",
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.9",
+    "emailjs-com": "^3.2.0",
+    "env-cmd": "^10.1.0",
+    "eslint": "8.27.0",
+    "eslint-config-next": "13.0.3",
+    "framer-motion": "^7.6.7",
+    "next": "13.0.3",
+    "next-sanity": "^3.1.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.39.5",
+    "react-hot-toast": "^2.4.1",
+    "react-icons": "^4.11.0",
+    "react-simple-typewriter": "^5.0.1",
+    "react-social-icons": "^5.15.0",
+    "react-toastify": "^9.1.3",
+    "typescript": "4.9.3"
+  }
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Contact Information
+You can reach out to me with questions at patrickcpoole@gmail.com
