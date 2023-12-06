@@ -18,9 +18,9 @@ Welcome to my developer portfolio! This website showcases information about me a
 ![Vercel](https://therealsujitk-vercel-badge.vercel.app/?app=vercel.com/patrickcpoole/react-portfolio)
 
 ### Main Features
-- **About Me:** Learn more about my background and skills.
-- **Experience:** Explore my professional experience in web development.
-- **Projects:** View details about my side projects, including descriptions and technologies used.
+- **About Me:** Learn more about my background and skills
+- **Experience:** Explore my professional experience in web development
+- **Projects:** View details about my side projects, including descriptions and technologies used
 - **Skills:** Analyze my skills organized through different coding concepts and tools: languages, frameworks, CSS frameworks, version control, and productivity
 
 ## Technologies Used
@@ -33,7 +33,7 @@ Welcome to my developer portfolio! This website showcases information about me a
 ## Libraries Used
 - Framer Motion
 - Sanity
-- Emailjs
+- Email.js
 - Heroicons
 - Various React libraries
 
