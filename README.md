@@ -32,6 +32,7 @@ Welcome to my developer portfolio! This website showcases information about me a
 
 ## Libraries Used
 - Framer Motion
+- TailwindCSS
 - Sanity
 - Email.js
 - Heroicons
