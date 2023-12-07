@@ -26,33 +26,7 @@ type Props = {
 }
 
 const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials }) => {
-  // useEffect(() => {
-  //   let timer: NodeJS.Timeout;
-
-  //   const container = document.querySelector('.custom-scrollbar');
-
-  
-  //   const handleScroll = () => {
-  //     if (container) {
-  //       container.classList.add('scrolling');
-  //       clearTimeout(timer);
-
-  //       timer = setTimeout(() => {
-  //         container.classList.remove('scrolling');
-  //       }, 2000); // Adjust the delay as needed
-  //     }
-  //   };
-
-  //   if (container) {
-  //     container.addEventListener('scroll', handleScroll);
-  //   }
-
-  //   return () => {
-  //     if (container) {
-  //       container.removeEventListener('scroll', handleScroll);
-  //     }
-  //   };
-  // }, []);
+ 
   return (
     <div className="bg-primary text-text h-screen w-screen
     snap-y snap-mandatory overscroll-contain overflow-y-scroll overflow-x-hidden scroll-smooth z-0 
@@ -63,33 +37,33 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
       </Head>
 
   
-      <Header socials={socials}/>
+      <Header socials={socials} />
       
  
-      <section id='hero' className='snap-start'>
+      <section id='hero' data-testid="hero" className='snap-start'>
         <Hero pageInfo={pageInfo} />
       </section>
 
      
-        <section id="about" className='snap-center pb-[20dvh] md:pb-0 '>
+        <section id="about" data-testid="about" className='snap-center pb-[20dvh] md:pb-0 '>
           <About pageInfo={pageInfo}/>
         </section>
   
-      <section id="experience" className='snap-start md:snap-always pt-[5dvh] md:pt-0 pb-[50dvh] md:pb-[10dvh] lg:pb-0'>
+      <section id="experience" data-testid="experience" className='snap-start md:snap-always pt-[5dvh] md:pt-0 pb-[50dvh] md:pb-[10dvh] lg:pb-0'>
         <WorkExperience experience={experience} />
       </section>
    
-       <section id="projects" className='snap-start  pt-[5dvh] md:pt-0 pb-[40dvh] md:pb-[10dvh] lg:pb-0'>
+       <section id="projects" data-testid="projects" className='snap-start  pt-[5dvh] md:pt-0 pb-[40dvh] md:pb-[10dvh] lg:pb-0'>
         <Projects projects={projects} />
       </section>
 
    
-      <section id="skills" className='snap-start  pt-[5dvh] md:pt-0 pb-[50dvh] md:pb-[10dvh] lg:pb-0' >
+      <section id="skills" data-testid="skills" className='snap-start  pt-[5dvh] md:pt-0 pb-[50dvh] md:pb-[10dvh] lg:pb-0' >
         <Skills skills={skills}/>
       </section>
      
     
-      <section id="contact" className='snap-start pb-[10dvh] pt-[5dvh] md:pt-0 md:pb-0'>
+      <section id="contact" data-testid="contact" className='snap-start pb-[10dvh] pt-[5dvh] md:pt-0 md:pb-0'>
         <Contact pageInfo={pageInfo} />
       </section>
       <Link href="#hero" legacyBehavior>
@@ -116,7 +90,10 @@ export const getStaticProps: GetStaticProps <Props> = async () => {
   const experience: Experience[] = await fetchExperiences();
   const projects: Project[] = await fetchProjects();
   const socials: Social[]= await fetchSocials();
-  
+  console.log('this is page info', pageInfo)
+  console.log('this is skills', skills);
+  console.log('this is projects', projects);
+  console.log('this is socials', socials);
   return {
     props: {
       pageInfo,
