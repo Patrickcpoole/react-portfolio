@@ -26,15 +26,15 @@ interface smallImage {
 
 export interface PageInfo extends SanityBody {
   _type: "PageInfo";
+  phoneNumber: string;
+  aboutImage: Image
   address: string;
-  aboutImage: string;
   email: string;
   role: string;
   typewriter: string[];
   heroImage: Image;
   name: string;
   about: string;
-  phoneNumber: string;
 }
 
 export interface Skill extends SanityBody {
@@ -52,7 +52,7 @@ export interface Experience extends SanityBody {
   companyImage: Image;
   dateStarted: date;
   linkToWebsite: string;
-  dateEnded: date;
+  dateEnded?: date;
   isCurrentlyWorkingHere: boolean;
   jobTitle: string;
   points: string[];
