@@ -53,7 +53,7 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
         <WorkExperience experience={experience} />
       </section>
    
-       <section id="projects" data-testid="projects" className='snap-start  pt-[5dvh] md:pt-0 pb-[40dvh] md:pb-[10dvh] lg:pb-0'>
+       <section id="projects" data-testid="projects" className='snap-start  pt-[5dvh] md:pt-0 pb-[20dvh] md:pb-[10dvh] lg:pb-0'>
         <Projects projects={projects} />
       </section>
 
