@@ -43,7 +43,7 @@ function Contact({ pageInfo }: Props) {
 			className='w-screen min-h-screen flex relative flex-col text-center 
     max-w-7xl justify-start mx-auto items-center'
 		>
-			<h3 className='section-heading mt-32'>
+			<h3 className='section-heading mt-22 md:mt-32'>
 				Contact
 			</h3>
 			<div className='flex flex-col mt-12 w-full'>

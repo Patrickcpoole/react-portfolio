@@ -19,7 +19,7 @@ function ExperienceCard({ job }: Props) {
       <article
         className="mt-2 flex flex-col rounded-md justify-between space-y-4 flex-shrink-0 mx-auto shadow-xl text-text 
           snap-center w-11/12 md:max-w-[800px] xl:h-[625px] text-center
-          bg-card p-5 pb-12 md:p-10 cursor-pointer overflow-hidden hover:shadow-2xl transition-transform duration-300 ease-in-out"
+          bg-card p-5 pb-12 md:p-10 cursor-pointer overflow-hidden hover:shadow-2xl transition-transform duration-10 "
       >
         <div className='flex flex-col justify-center items-center'>
         <motion.img
