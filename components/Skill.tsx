@@ -15,7 +15,7 @@ function Skill({ skill }: Props) {
 				duration-300 ease-in-out flex justify-center items-center'
 			>
 				<Image
-					height={300}
+					height={300} 
 					width={300}
 					src={urlFor(skill?.image).url()}
 					className='w-10 h-10'

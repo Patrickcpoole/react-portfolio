@@ -112,9 +112,7 @@ function Projects({ projects }: Props) {
             className='relative min-h-screen w-screen flex overflow-x-hidden md:overflow-hidden flex-col text-left max-w-full justify-start mx-auto items-center z-0 overflow-y-scroll '
         >
             <h3 className='section-heading'>Projects</h3>
-            <h5 className='section-sub-heading md:hidden'>
-                Swipe cards to view more
-            </h5>
+        
 
             {isVisible && projectIndex > 0 && (
                 <button
@@ -126,14 +124,14 @@ function Projects({ projects }: Props) {
             )}
             <div
                 ref={scrollContainerRef}
-                className='flex flex-col w-full items-center md:flex  md:flex-row md:relative md:h-screen md:w-[95%] md:snap-x md:snap-mandatory md:overflow-y-hidden md:pb-5 md:hide-scrollbar'
+                className='flex flex-col w-full   md:flex-start items-center md:flex  md:flex-row md:relative  md:w-[95%] md:snap-x md:snap-mandatory md:overflow-y-hidden md:pb-5 md:hide-scrollbar'
             >
                 {projects.map((project, index) => (
-									<div key={index} className='snap-center snap-always flex-shrink-0 w-11/12 md:w-full overflow-x-hidden  flex flex-col 
+									<div key={index} className='snap-center snap-always flex-shrink-0 w-11/12 md:h-screen md:w-full overflow-x-hidden  flex flex-col 
 									justify-start items-center transition-transform duration-300 ease-in-out mx-10'>
                     <article
                         
-                        className='flex flex-col  items-center mt-12 md:mt-6 rounded-md justify-start space-y-7 shadow-xl text-text md:w-[40%] 
+                        className='flex flex-col  items-center mt-12 rounded-md justify-start space-y-7 shadow-xl text-text md:w-[40%] 
 												text-center pb-5 
 												bg-card md:p-10 hover:shadow-2xl'
                     >
