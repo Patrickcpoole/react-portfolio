@@ -126,7 +126,7 @@ function Projects({ projects }: Props) {
             )}
             <div
                 ref={scrollContainerRef}
-                className='flex flex-col w-full justify-center items-center md:relative md:h-screen md:w-[95%] md:flex md:snap-x md:snap-mandatory md:overflow-y-hidden md:pb-5 md:hide-scrollbar'
+                className='flex flex-col w-full items-center md:flex  md:flex-row md:relative md:h-screen md:w-[95%] md:snap-x md:snap-mandatory md:overflow-y-hidden md:pb-5 md:hide-scrollbar'
             >
                 {projects.map((project, index) => (
 									<div key={index} className='snap-center snap-always flex-shrink-0 w-11/12 md:w-full overflow-x-hidden  flex flex-col 
