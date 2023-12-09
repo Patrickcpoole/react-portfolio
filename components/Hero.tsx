@@ -34,16 +34,28 @@ function Hero({ pageInfo }: Props) {
        
 				<div className='flex flex-wrap justify-center items-center mt-5 '>
 					<Link href='#about'>
-						<button className='heroButton '>About</button>{' '}
+						<button className='border-[#169137]/40 bg-[#169137]/40 px-6 mx-1 py-2 border 
+    border-primary   text-text
+      md:mx-5 md:py-2 md:border md:bg-transparent rounded-full uppercase text-xs tracking-widest md:text-heading
+      transition-all hover:border-[#169137]/40 hover:text-[#FFF] hover:bg-[#169137]/40 mt-2 md:mt-0'>About</button>
 					</Link>
 					<Link href='#experience'>
-						<button className='heroButton'>Experience</button>{' '}
+						<button className='border-[#169137]/40 bg-[#169137]/40 px-6 mx-1 py-2 border 
+    border-primary   text-text
+      md:mx-5 md:py-2 md:border md:bg-transparent rounded-full uppercase text-xs tracking-widest md:text-heading
+      transition-all hover:border-[#169137]/40 hover:text-[#FFF] hover:bg-[#169137]/40 mt-2 md:mt-0'>Experience</button>
 					</Link>
 					<Link href='#skills'>
-						<button className='heroButton'>Skills</button>{' '}
+						<button className='border-[#169137]/40 bg-[#169137]/40 px-6 mx-1 py-2 border 
+    border-primary   text-text
+      md:mx-5 md:py-2 md:border md:bg-transparent rounded-full uppercase text-xs tracking-widest md:text-heading
+      transition-all hover:border-[#169137]/40 hover:text-[#FFF] hover:bg-[#169137]/40 mt-2 md:mt-0'>Skills</button>
 					</Link>
 					<Link href='#projects'>
-						<button className='heroButton mt-2 md:mt-0'>Projects</button>{' '}
+						<button className='border-[#169137]/40 bg-[#169137]/40 px-6 mx-1 py-2 border 
+    border-primary   text-text
+      md:mx-5 md:py-2 md:border md:bg-transparent rounded-full uppercase text-xs tracking-widest md:text-heading
+      transition-all hover:border-[#169137]/40 hover:text-[#FFF] hover:bg-[#169137]/40 mt-2 md:mt-0'>Projects</button>
 					</Link>
 				</div>
 			</div>

@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useCallback, useState } from 'react';
+import React, { useRef, useEffect, useCallback, useState, use } from 'react';
 import { FaGithub, FaMobile } from 'react-icons/fa';
 import Image from 'next/image';
 import { MdArrowBack, MdArrowForward } from 'react-icons/md';
@@ -11,6 +11,7 @@ type Props = {
 
 function Projects({ projects }: Props) {
     const [isScrolling, setIsScrolling] = useState(false);
+    const [projectIndex, setProjectIndex] = useState(0)
     const [isVisible, setIsVisible] = useState(false);
 
     const projectRef = useRef<HTMLDivElement>(null);
@@ -19,6 +20,13 @@ function Projects({ projects }: Props) {
 			(direction: 'left' | 'right') => {
 					if (isScrolling) return;
 					setIsScrolling(true);
+                    if(direction === 'left') {
+                        const currentIndex = projectIndex
+                    setProjectIndex(currentIndex - 1)
+                    } else {
+                        const currentIndex = projectIndex
+                    setProjectIndex(currentIndex + 1)
+                    }
 					if (scrollContainerRef.current) {
 							const container = scrollContainerRef.current;
 							const scrollAmount =
@@ -42,8 +50,12 @@ function Projects({ projects }: Props) {
         (event: KeyboardEvent) => {
             if (!isScrolling) {
                 if (event.code === 'ArrowRight') {
+                    const currentIndex = projectIndex
+                    setProjectIndex(currentIndex + 1)
                     scroll('right');
                 } else if (event.code === 'ArrowLeft') {
+                    const currentIndex = projectIndex
+                    setProjectIndex(currentIndex - 1)
                     scroll('left');
                 }
             }
@@ -104,7 +116,7 @@ function Projects({ projects }: Props) {
                 Swipe cards to view more
             </h5>
 
-            {isVisible && (
+            {isVisible && projectIndex > 0 && (
                 <button
                     onClick={() => scroll('left')}
                     className='hidden md:block fixed left-4 top-1/2 text-heading z-30 hover:text-accent'
@@ -114,14 +126,14 @@ function Projects({ projects }: Props) {
             )}
             <div
                 ref={scrollContainerRef}
-                className='relative h-screen w-[95%] flex snap-x snap-mandatory overflow-y-hidden pb-5 hide-scrollbar'
+                className='flex flex-col w-full justify-center items-center md:relative md:h-screen md:w-[95%] md:flex md:snap-x md:snap-mandatory md:overflow-y-hidden md:pb-5 md:hide-scrollbar'
             >
-                {projects.map((project, key) => (
-									<div key={key} className='snap-center snap-always flex-shrink-0 w-full overflow-x-hidden  flex flex-col 
+                {projects.map((project, index) => (
+									<div key={index} className='snap-center snap-always flex-shrink-0 w-11/12 md:w-full overflow-x-hidden  flex flex-col 
 									justify-start items-center transition-transform duration-300 ease-in-out mx-10'>
                     <article
                         
-                        className='flex flex-col  items-center mt-12 rounded-md justify-start space-y-7 shadow-xl text-text md:w-[40%] 
+                        className='flex flex-col  items-center mt-12 md:mt-6 rounded-md justify-start space-y-7 shadow-xl text-text md:w-[40%] 
 												text-center pb-5 
 												bg-card md:p-10 hover:shadow-2xl'
                     >
@@ -130,11 +142,11 @@ function Projects({ projects }: Props) {
                             width={1600}
                             src={urlFor(project?.image).url()}
                             className='rounded-t-md'
-                            alt=''
+                            alt='project image'
                         />
 
                         <h4 className='text-3xl'>{project.title}</h4>
-                        <div className='flex flex-row flex-wrap justify-center items-center mt-4'>
+                        <div className='flex flex-row flex-wrap justify-center items-center mt-4 md:mt-2'>
                             {project.technologies.map((technology) => (
                                 <Image
                                     height={200}
@@ -164,7 +176,7 @@ function Projects({ projects }: Props) {
                     </article>
 										</div>
                 ))}
-                {isVisible && (
+                {isVisible && projectIndex === 0 && (
                     <button
                         onClick={() => scroll('right')}
                         className='hidden md:block fixed right-6 top-1/2 z-30 text-heading hover:text-accent'

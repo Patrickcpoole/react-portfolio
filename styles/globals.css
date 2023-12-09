@@ -3,37 +3,37 @@
 @tailwind utilities;
 
 @layer components {
-  .heroButton {
-    @apply border-[#169137]/40 bg-[#169137]/40 px-6 mx-1 py-2 border 
-    border-primary rounded-full uppercase text-xs tracking-widest text-text
-    transition-all
-  }
+  /* Mobile styles */
 
   .section-heading {
-    @apply relative uppercase pl-3 tracking-[0.5em] md:tracking-[0.75em] text-heading text-2xl mx-auto mt-[15%]
+    @apply relative uppercase pl-3 tracking-[0.5em] md:tracking-[0.75em] text-heading text-2xl mx-auto md:mt-[15%] mt-[5%];
   }
 
   .section-sub-heading {
-    @apply relative my-4 uppercase pl-3 text-heading text-xs md:text-sm text-center mb-4 mx-auto tracking-[0.25em]
+    @apply relative my-4 uppercase pl-3 text-heading text-xs md:text-sm text-center mb-4 mx-auto tracking-[0.25em];
   }
 
   .projectButton {
-    @apply px-4 py-2 mx-5 border border-[#169137]/40 bg-[#169137]/40  rounded-full  text-xs tracking-widest text-text
-    transition-all flex justify-center items-center;
-    
+    @apply md:px-6 md:mx-3 px-4 py-2 mx-5 md:border-heading border uppercase border-[#169137]/40 bg-[#169137]/40  rounded-full  text-xs tracking-widest text-text
+    transition-all flex justify-center items-center hover:border-[#169137]/40 hover:text-text hover:bg-[#169137]/40
   }
+
 
   .skillFilterButton {
-    @apply border-[#169137]/40 bg-card px-6 mx-1 py-2 border w-[45%] h-8
+    @apply border-[#169137]/40 bg-card md:mx-2 px-6 md:px-8 md:py-3 mx-1 py-2 border md:w-auto w-[45%] h-8
     border-primary rounded-full uppercase text-xs tracking-widest text-text
     transition-all justify-center items-center;
   }
 
+
+
   .skillFilterButtonActive {
-    @apply border-[#169137]/40 bg-[#169137] px-6 mx-1 py-2 border w-[45%] h-8
+    @apply border-[#169137]/40 bg-[#169137] px-6 mx-1 py-2 border w-[45%] md:w-auto h-8 md:px-8 md:py-3
     border-primary rounded-full uppercase text-xs tracking-widest text-text
     transition-all justify-center items-center;
   }
+
+
 
   .contactInput {
     @apply outline-none bg-card rounded-sm border-b px-4 py-4 border-primary w-full
@@ -46,62 +46,24 @@
       opacity: 0;
     }
   }
+
+  .hide-scrollbar {
+    scrollbar-width: thin; 
+    -ms-overflow-style: none; 
+    overflow: scroll;
+  } 
+
+  .hide-scrollbar::-webkit-scrollbar {
+    width: 0.5rem;
+  }
   
   .animate-ping-custom {
     animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
   }
- 
 
-  /* Responsive styles for small screens */
-  @screen md {
-    .section-heading {
-      @apply relative uppercase pl-3 tracking-[0.5em] md:tracking-[0.75em] text-heading text-2xl mx-auto mt-[5%]
-    }
-
-    .hide-scrollbar {
-      scrollbar-width: thin; /* Firefox */
-      -ms-overflow-style: none; /* Internet Explorer 11 */
-      overflow: scroll;
-  }
-  
-  /* For WebKit browsers (Chrome, Safari) */
-  .hide-scrollbar::-webkit-scrollbar {
-      width: 0.5rem;
-  }
-  
   .hide-scrollbar::-webkit-scrollbar-thumb {
-      background-color: transparent;
+    background-color: transparent;
   }
-
-    .heroButton {
-      @apply px-6 mx-5 py-2 border bg-transparent rounded-full uppercase text-xs tracking-widest text-heading
-    transition-all hover:border-[#169137]/40 hover:text-[#FFF] hover:bg-[#169137]/40;
-      
-    }
-
-    .projectButton {
-      @apply px-6 mx-3 py-2 border border-heading rounded-full uppercase text-xs tracking-widest text-text
-    transition-all hover:border-[#169137]/40 hover:text-text hover:bg-[#169137]/40 flex justify-center items-center;
-    }
-
-    .skillFilterButton {
-      @apply border-[#169137]/40 bg-card mx-2 px-8 py-3 border w-auto
-      border-primary rounded-full uppercase tracking-widest text-text
-      transition-all justify-center items-center;
-    }
-  
-    .skillFilterButtonActive {
-      @apply border-[#169137]/40 bg-[#169137] px-6 mx-1 py-2 border w-auto
-      border-primary rounded-full uppercase  tracking-widest text-text
-      transition-all justify-center items-center;
-    }
-
-    .contactInput {
-      @apply outline-none bg-card rounded-sm border-b px-10 py-4 border-primary w-full
-      text-text placeholder-heading transition-all focus:border-[#169137]/40 focus:text-text;
-    }
-  }
-
-  /* Responsive styles for medium screens */
 
 }
+
