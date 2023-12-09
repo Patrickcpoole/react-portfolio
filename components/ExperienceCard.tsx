@@ -28,10 +28,10 @@ function ExperienceCard({ job }: Props) {
 				/>
 				<div className='px-0 md:px-2'>
 				
-					<h4 className='text-2xl md:text-3xl font-light'>
+					<h4 className='text-3xl font-light'>
 						{job.jobTitle}
 					</h4>
-					<p className='font-bold text-lg md:text-xl mt-2'>{job.company}</p>
+					<p className='font-bold text-xl mt-2'>{job.company}</p>
 					<div className='flex flex-wrap justify-center items-center w-full space-x-2 mt-4'>
 				
 						{orderedTechnologies.map((technology) => (
@@ -45,15 +45,15 @@ function ExperienceCard({ job }: Props) {
 							/>
 						))}
 					</div>
-					<p className='uppercase pt-5 text-text text-xs '>
+					<p className='uppercase pt-5 text-text text-sm md:text-xs'>
 						Started: {job.dateStarted}
 					</p>
 					{job.dateEnded ? (
-						<p className='uppercase mb-5 text-text text-xs '>
+						<p className='uppercase mb-5 text-text text-sm md:text-xs '>
 							Ended: {job.dateEnded}
 						</p>
 					) : (
-						<p className='uppercase mb-5 text-text text-xs'>Current Job</p>
+						<p className='uppercase mb-5 text-text text-sm md:text-xs'>Current Job</p>
 					)}
 					<ul className='list-disc space-y-4 text-md px-6 lg:px-4  text-left'>
 					
