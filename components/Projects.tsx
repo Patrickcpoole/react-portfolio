@@ -109,7 +109,7 @@ function Projects({ projects }: Props) {
     return (
         <div
             ref={projectRef}
-            className='relative min-h-screen w-screen flex overflow-x-hidden md:overflow-hidden flex-col text-left max-w-full justify-start mx-auto items-center z-0 overflow-y-scroll '
+            className='relative w-screen flex overflow-x-hidden md:overflow-hidden flex-col text-left max-w-full justify-start mx-auto items-center z-0 overflow-y-scroll '
         >
             <h3 className='section-heading'>Projects</h3>
         
@@ -157,7 +157,7 @@ function Projects({ projects }: Props) {
                             ))}
                         </div>
                         <p className='text-md mt-2 px-4'>{project.summary}</p>
-                        <div className='flex justify-center items-center mt-10'>
+                        <div className='flex justify-center items-center mt-10 pb-5'>
                             <a href={project.linkToGithub} target='_blank' rel='noreferrer'>
                                 <button className='projectButton'>
                                     <FaGithub className='mr-2' />

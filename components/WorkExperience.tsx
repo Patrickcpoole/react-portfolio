@@ -23,7 +23,7 @@ function WorkExperience({ experience }: Props) {
       <h3 className="section-heading">
         Experience
       </h3>
-      <div className="flex flex-col w-full xl:flex-row justify-center items-center mt-6 ">
+      <div className="flex flex-col w-[95%] xl:flex-row justify-center items-center mt-6  ">
         {orderedExperience.map((job) => (
           <ExperienceCard key={job._id} job={job} />
         ))}
