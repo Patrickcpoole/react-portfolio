@@ -131,7 +131,7 @@ function Projects({ projects }: Props) {
 									justify-start items-center transition-transform duration-300 ease-in-out mx-10'>
                     <article
                         
-                        className='flex flex-col  items-center mt-12 rounded-md justify-start space-y-7 shadow-xl text-text md:w-[40%] 
+                        className='flex flex-col  items-center mt-6 rounded-md justify-start space-y-7 shadow-xl text-text md:w-[40%] 
 												text-center pb-5 
 												bg-card md:p-10 hover:shadow-2xl'
                     >
