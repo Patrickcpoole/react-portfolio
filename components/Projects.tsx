@@ -124,7 +124,7 @@ function Projects({ projects }: Props) {
             )}
             <div
                 ref={scrollContainerRef}
-                className='flex flex-col w-full   md:flex-start items-center md:flex  md:flex-row md:relative  md:w-[95%] md:snap-x md:snap-mandatory md:overflow-y-hidden md:pb-5 md:hide-scrollbar'
+                className='flex flex-col w-full   md:flex-start items-center md:flex  md:flex-row md:relative  md:w-[95%] md:snap-x md:snap-mandatory md:overflow-y-hidden  md:hide-scrollbar'
             >
                 {projects.map((project, index) => (
 									<div key={index} className='snap-center snap-always flex-shrink-0 w-11/12 md:h-screen md:w-full overflow-x-hidden  flex flex-col 
@@ -132,7 +132,7 @@ function Projects({ projects }: Props) {
                     <article
                         
                         className='flex flex-col  items-center mt-6 rounded-md justify-start space-y-7 shadow-xl text-text md:w-[40%] 
-												text-center pb-5 
+												text-center 
 												bg-card md:p-10 hover:shadow-2xl'
                     >
                         <Image
