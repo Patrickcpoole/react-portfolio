@@ -11,7 +11,7 @@ function Skill({ skill }: Props) {
 	return (
 		<div className='group relative flex cursor-pointer'>
 			<div
-				className='rounded-full bg-card object-cover md:w-[6.5em] md:h-[6.5em] w-[4.75em] h-[4.75em] transition-transform
+				className='rounded-full bg-card object-cover md:w-[6.5em] md:h-[6.5em] w-[6em] h-[6em] transition-transform
 				duration-300 ease-in-out flex justify-center items-center'
 			>
 				<Image
@@ -23,7 +23,7 @@ function Skill({ skill }: Props) {
 				/>
 				<div
 					className='absolute opacity-0 group-hover:opacity-80 transition duration-300
-			ease-in-out group-hover:bg-text w-[4.75em] h-[4.75em] md:w-24 md:h-24 xl:w-[6.5em] xl:h-[6.5em] rounded-full z-0'
+			ease-in-out group-hover:bg-text w-[6em] h-[6em] md:w-24 md:h-24 xl:w-[6.5em] xl:h-[6.5em] rounded-full z-0'
 				>
 					<div className='flex items-center justify-center h-full text-center'>
 						<p className='text-sm font-bold text-opacity-100 text-primary p-5'>
