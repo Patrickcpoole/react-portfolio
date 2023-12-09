@@ -36,7 +36,7 @@ function ExperienceCard({ job }: Props) {
 				
 						{orderedTechnologies.map((technology) => (
 							<Image
-								className='w-6 h-6 lg:w-8 lg:h-8 my-2'
+								className='w-8 h-8 my-2'
 								width={200}
 								height={200}
 								key={technology._id}
