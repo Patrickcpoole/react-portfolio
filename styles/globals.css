@@ -6,7 +6,7 @@
   /* Mobile styles */
 
   .section-heading {
-    @apply relative uppercase pl-3 tracking-[0.5em] md:tracking-[0.75em] text-heading text-2xl mx-auto md:mt-[15%] mt-[5%];
+    @apply relative uppercase pl-3 tracking-[0.5em] md:tracking-[0.75em] text-heading text-2xl mx-auto mt-[15%] 
   }
 
   .section-sub-heading {
