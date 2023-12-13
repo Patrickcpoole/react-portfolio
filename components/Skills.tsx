@@ -54,7 +54,7 @@ function Skills({ directionLeft, skills }: Props) {
 	const containerClass =
 		filteredSkills.length < 5
 			? 'flex justify-center flex-wrap gap-5'
-			: 'md:grid md:grid-cols-5 flex justify-center flex-wrap gap-5';
+			: 'md:grid md:grid-cols-6 flex justify-center flex-wrap gap-5';
 
 	return (
 		<motion.div

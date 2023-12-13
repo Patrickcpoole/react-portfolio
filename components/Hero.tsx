@@ -19,13 +19,14 @@ function Hero({ pageInfo }: Props) {
 		link: '#experience'
 	},
 	{
-		name: 'Skills',
-		link: '#skills'
-	},
-	{
 		name: 'Projects',
 		link: '#projects'
 	},
+	{
+		name: 'Skills',
+		link: '#skills'
+	},
+	
 ]
 	const [text] = useTypewriter({
 		words: [...pageInfo['typewriter']],
