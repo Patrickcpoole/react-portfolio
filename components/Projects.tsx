@@ -128,7 +128,7 @@ function Projects({ projects }: Props) {
 									className='hidden md:flex flex-col justify-center items-center z-30 hover:text-accent text-heading animate-pulse mr-4 '
 								>
 									<MdArrowBack size={'4em'} />
-									<span>Previous Project</span>
+								
 								</button>
 							)}
 						</div>
@@ -183,7 +183,7 @@ function Projects({ projects }: Props) {
 									className='hidden md:flex flex-col justify-center items-center  hover:text-accent text-heading animate-pulse ml-4 '
 								>
 									<MdArrowForward size={'4em'} />
-									<span>Next Project</span>
+									
 								</button>
 							)}
 						</div>
