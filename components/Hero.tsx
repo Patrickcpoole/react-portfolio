@@ -3,6 +3,7 @@ import React from 'react';
 import { Cursor, useTypewriter } from 'react-simple-typewriter';
 import BackgroundCircles from './BackgroundCircles';
 import { PageInfo } from '../typings';
+import { urlFor } from '../sanity';
 
 type Props = {
 	pageInfo: PageInfo;
@@ -39,7 +40,7 @@ function Hero({ pageInfo }: Props) {
 			<BackgroundCircles />
 			<img
 				className='relative rounded-full h-32 w-32 mx-auto mt-10 md:mt-0 object-cover '
-				src='https://wageup-media.s3.amazonaws.com/profile.JPG'
+				src={urlFor(pageInfo?.aboutImage).url()}
 			/>
 			<div className='z-20'>
 				<h2 className='text-sm uppercase text-heading pb-2 tracking-[15px] my-10 md:my-0'>
