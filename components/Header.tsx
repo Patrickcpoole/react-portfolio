@@ -46,7 +46,7 @@ function Header({ socials }: Props) {
 			>
 				
 				<a
-					href='https://amplify-venu20-dev-131644-deployment.s3.amazonaws.com/Patrick+C+Poole+Resume.pdf'
+					href='https://amplify-venu20-dev-131644-deployment.s3.amazonaws.com/Patrick+Poole+Resume.pdf'
 					target='_blank'
 					rel='noopener noreferrer'
 					className='w-auto flex md:mr-4 group'
