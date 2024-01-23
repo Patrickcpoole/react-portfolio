@@ -6,6 +6,9 @@ module.exports = {
     ],
     theme: {
       extend: {
+        fontFamily: {
+          sans: ['Source Code Pro', 'Roboto', 'Helvetica Neue', 'Arial', 'Noto Sans', 'sans-serif'],
+        },
         colors: {
           primary: '#333333',
           secondary: '#dbdbdb',
