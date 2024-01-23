@@ -44,7 +44,7 @@ function Hero({ pageInfo }: Props) {
 			/>
 			<div className='z-20'>
 				<h2 className='text-sm uppercase text-heading pb-2 tracking-[15px] my-10 md:my-0'>
-					Full Stack Developer
+					{pageInfo?.role}
 				</h2>
 				<div className='z-20'>
 					<h1 className='text-4xl lg:text-5xl font-semibold px-10 h-32 md:h-24'>
