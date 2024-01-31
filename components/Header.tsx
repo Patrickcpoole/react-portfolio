@@ -3,6 +3,7 @@ import { FaGithub, FaLinkedin, FaEnvelope, FaFile } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Social } from '../typings';
+import ThemeToggle from './ThemeToggle';
 type Props = { socials: Social[] };
 function Header({ socials }: Props) {
 	return (
@@ -14,9 +15,10 @@ function Header({ socials }: Props) {
 				transition={{ duration: 1.5 }}
 				className='flex flex-row items-center md:justify-around'
 			>
-			
+				
+				<ThemeToggle />
 				{socials.map((social, index) => (
-					<a
+						<a
 						key={index}
 						href={social.url}
 						target='_blank'
@@ -37,6 +39,7 @@ function Header({ socials }: Props) {
 						)}
 					</a>
 				))}
+			
 			</motion.div>
 			<motion.div
 				initial={{ x: 500, opacity: 0, scale: 0.5 }}

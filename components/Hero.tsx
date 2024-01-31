@@ -12,23 +12,22 @@ type Props = {
 function Hero({ pageInfo }: Props) {
 	const navButtons = [
 		{
-		name: 'About',
-		link: '#about'
-	},
-	{
-		name: 'Experience',
-		link: '#experience'
-	},
-	{
-		name: 'Projects',
-		link: '#projects'
-	},
-	{
-		name: 'Skills',
-		link: '#skills'
-	},
-	
-]
+			name: 'About',
+			link: '#about',
+		},
+		{
+			name: 'Experience',
+			link: '#experience',
+		},
+		{
+			name: 'Projects',
+			link: '#projects',
+		},
+		{
+			name: 'Skills',
+			link: '#skills',
+		},
+	];
 	const [text] = useTypewriter({
 		words: [...pageInfo['typewriter']],
 		loop: true,
@@ -48,23 +47,24 @@ function Hero({ pageInfo }: Props) {
 				</h2>
 				<div className='z-20'>
 					<h1 className='text-4xl lg:text-5xl font-semibold px-10 h-32 md:h-24'>
-						<span className='mr-3 text-text'>{text}</span>
+						<span className='mr-3 '>{text}</span>
 						<Cursor cursorColor='#169137' />
 					</h1>
 				</div>
-       
+
 				<div className='flex flex-wrap justify-center items-center mt-5 '>
-					{
-						navButtons.map((button, index) => (
-							<Link href={button.link} key={index}>
-						<button className='border-[#169137]/40 bg-[#169137]/40 px-6 mx-1 py-2 border 
-    border-primary   text-text
-      md:mx-5 md:py-2 md:border md:bg-transparent rounded-full uppercase text-xs tracking-widest md:text-heading
-      transition-all hover:border-[#169137]/40 hover:text-[#FFF] hover:bg-[#169137]/40 mt-2 md:mt-0'>{button.name}</button>
-					</Link>
-						))
-					}
-					
+					{navButtons.map((button, index) => (
+						<Link href={button.link} key={index}>
+							<button
+								className='border-[#169137]/40 bg-[#169137]/40 px-6 mx-1 py-2 border 
+    						dark:border-primaryDark  md:mx-5 md:py-2 md:border md:bg-transparent rounded-full uppercase 
+								text-xs tracking-widest md:text-heading transition-all dark-hover:border-[#169137]/40 
+								hover:border-[#169137] hover:text-[#FFF] dark-hover:bg-[#169137]/40 hover:bg-[#169137] mt-2 md:mt-0'
+							>
+								{button.name}
+							</button>
+						</Link>
+					))}
 				</div>
 			</div>
 		</div>

@@ -11,9 +11,9 @@ function ExperienceCard({ job }: Props) {
 	);
 	return (
 		<article
-			className='mt-2 flex flex-col rounded-md justify-between space-y-4 flex-shrink-0 mx-auto shadow-xl text-text 
+			className='mt-2 flex flex-col rounded-md justify-between space-y-4 flex-shrink-0 mx-auto shadow-xl 
       snap-center w-11/12 md:max-w-[700px] xl:h-[625px] text-center
-      bg-card p-5 pb-12 md:p-10 cursor-pointer overflow-hidden hover:shadow-2xl transition-transform duration-10 '
+      dark:bg-card bg-cardLight p-5 pb-12 md:p-10 cursor-pointer overflow-hidden hover:shadow-2xl transition-transform duration-10 '
 			onClick={() => window.open(job.linkToWebsite, '_blank')}
 		>
 		
@@ -47,15 +47,15 @@ function ExperienceCard({ job }: Props) {
 							/>
 						))}
 					</div>
-					<p className='uppercase pt-5 text-text text-sm '>
+					<p className='uppercase pt-5  text-sm '>
 						Started: {job.dateStarted}
 					</p>
 					{job.dateEnded ? (
-						<p className='uppercase mb-5 text-text text-sm  '>
+						<p className='uppercase mb-5  text-sm  '>
 							Ended: {job.dateEnded}
 						</p>
 					) : (
-						<p className='uppercase mb-5 text-text text-sm '>Current Job</p>
+						<p className='uppercase mb-5  text-sm '>Current Job</p>
 					)}
 					<ul className='list-disc space-y-4 text-md px-6 lg:px-4  text-left'>
 					
