@@ -56,10 +56,10 @@ function Hero({ pageInfo }: Props) {
 					{navButtons.map((button, index) => (
 						<Link href={button.link} key={index}>
 							<button
-								className='border-[#169137]/40 bg-[#169137]/40 px-6 mx-1 py-2 border 
-    						dark:border-primaryDark  md:mx-5 md:py-2 md:border md:bg-transparent rounded-full uppercase 
-								text-xs tracking-widest md:text-heading transition-all dark-hover:border-[#169137]/40 
-								hover:border-[#169137] hover:text-[#FFF] dark-hover:bg-[#169137]/40 hover:bg-[#169137] mt-2 md:mt-0'
+								className='border-[#169137]/40 dark:border-[#169137]/40 bg-[#169137]/40 px-6 mx-1 py-2 border z-50 bg-white
+    						dark:border-primaryDark  md:mx-5 md:py-2 md:border dark:md:bg-transparent rounded-full uppercase 
+								text-xs tracking-widest md:text-heading transition-all dark:hover:border-[#169137]/40 
+								hover:border-[#169137] hover:text-[#FFF] dark:hover:bg-[#169137]/40 hover:bg-[#169137] mt-2 md:mt-0'
 							>
 								{button.name}
 							</button>
