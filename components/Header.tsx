@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect, useState} from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope, FaFile } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { Social } from '../typings';
+import ThemeToggle from './ThemeToggle';
 type Props = { socials: Social[] };
 function Header({ socials }: Props) {
+	const [theme, setTheme] = useState<string>('light');
+
+
 	return (
 		<header className='sticky top-[1%] p-5 flex items-center justify-between max-w-7xl mx-auto z-50 md:w-screen '>
 		
@@ -14,9 +18,10 @@ function Header({ socials }: Props) {
 				transition={{ duration: 1.5 }}
 				className='flex flex-row items-center md:justify-around'
 			>
-			
+				
+				<ThemeToggle />
 				{socials.map((social, index) => (
-					<a
+						<a
 						key={index}
 						href={social.url}
 						target='_blank'
@@ -37,6 +42,7 @@ function Header({ socials }: Props) {
 						)}
 					</a>
 				))}
+			
 			</motion.div>
 			<motion.div
 				initial={{ x: 500, opacity: 0, scale: 0.5 }}
@@ -44,9 +50,8 @@ function Header({ socials }: Props) {
 				transition={{ duration: 1.5 }}
 				className='flex items-center flex-nowrap text-heading cursor-pointer '
 			>
-				
-				<a
-					href='https://amplify-venu20-dev-131644-deployment.s3.amazonaws.com/Patrick+Poole+Resume.pdf'
+			{theme === 'dark' ? <a
+					href='https://amplify-venu20-dev-131644-deployment.s3.amazonaws.com/Patrick+Poole+Dark+Resume+.pdf'
 					target='_blank'
 					rel='noopener noreferrer'
 					className='w-auto flex md:mr-4 group'
@@ -59,7 +64,23 @@ function Header({ socials }: Props) {
 					<p className='uppercase hidden md:inline-flex text-sm text-heading group-hover:text-accent'>
 						Resume
 					</p>
-				</a>
+				</a> :
+				<a
+				href='https://amplify-venu20-dev-131644-deployment.s3.amazonaws.com/Patrick+Poole+Resume.pdf'
+				target='_blank'
+				rel='noopener noreferrer'
+				className='w-auto flex md:mr-4 group'
+			>
+			
+				<FaFile
+					className='text-heading mr-3 group-hover:text-accent'
+					size={'1.5em'}
+				/>
+				<p className='uppercase hidden md:inline-flex text-sm text-heading group-hover:text-accent'>
+					Resume
+				</p>
+			</a>}	
+				
 				<Link href='#contact' legacyBehavior>
 				
 					<div className='flex w-auto md:ml-4 group cursor-pointer'>

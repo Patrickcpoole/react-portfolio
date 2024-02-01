@@ -134,9 +134,9 @@ function Projects({ projects }: Props) {
 						</div>
 					
 						<article
-							className='flex flex-col items-center mt-12 rounded-md justify-start space-y-7 shadow-xl text-text md:w-[600px] 
+							className='flex flex-col items-center mt-12 rounded-md justify-start space-y-7 shadow-xl md:w-[600px] 
 												text-center 
-												bg-card  hover:shadow-2xl'
+												dark:bg-card bg-cardLight hover:shadow-2xl'
 						>
 							<Image
 								height={1200}

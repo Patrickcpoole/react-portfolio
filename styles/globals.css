@@ -13,15 +13,26 @@
     @apply relative my-4 uppercase pl-3 text-heading text-xs md:text-sm text-center mb-4 mx-auto tracking-[0.25em];
   }
 
+
   .projectButton {
-    @apply md:px-6 md:mx-3 px-4 py-2 mx-5 md:border-heading border uppercase border-[#169137]/40 bg-[#169137]/40  rounded-full  text-xs tracking-widest text-text
-    transition-all flex justify-center items-center hover:border-[#169137]/40 hover:text-text hover:bg-[#169137]/40
+    @apply
+      md:px-6 md:mx-3
+      px-4 py-2 mx-5
+      border-cardLight dark:border-card
+      border uppercase
+      bg-[#169137]/80
+      rounded-full
+      text-xs tracking-widest
+      text-white
+      transition-all
+      flex justify-center items-center
+      dark:hover:border-[#169137]/80  hover:border-[#169137]/80 
   }
 
 
   .skillFilterButton {
-    @apply border-[#169137]/40 bg-card md:mx-2 px-6 md:px-8 md:py-3 mx-1 py-2 border md:w-auto w-[45%] h-8
-    border-primary rounded-full uppercase text-xs tracking-widest text-text
+    @apply border-[#169137]/40 dark:bg-card bg-cardLight md:mx-2 px-6 md:px-8 md:py-3 mx-1 py-2 border md:w-auto w-[45%] h-8
+    dark:border-primaryDark border-primaryLight rounded-full uppercase text-xs tracking-widest 
     transition-all justify-center items-center;
   }
 
@@ -29,15 +40,15 @@
 
   .skillFilterButtonActive {
     @apply border-[#169137]/40 bg-[#169137] px-6 mx-1 py-2 border w-[45%] md:w-auto h-8 md:px-8 md:py-3
-    border-primary rounded-full uppercase text-xs tracking-widest text-text
+    dark:border-primaryDark border-primaryLight rounded-full uppercase text-xs tracking-widest text-text
     transition-all justify-center items-center;
   }
 
 
 
   .contactInput {
-    @apply outline-none bg-card rounded-sm border-b px-4 py-4 border-primary w-full
-    text-text placeholder-heading transition-all focus:border-[#169137]/40 focus:text-text;
+    @apply outline-none dark:bg-card bg-cardLight rounded-sm border-b px-4 py-4 border-primaryLight dark:border-primaryDark w-full
+    dark:text-text dark:placeholder-heading placeholder-primaryDark transition-all focus:border-[#169137]/40 focus:text-text;
   }
 
   @keyframes ping {

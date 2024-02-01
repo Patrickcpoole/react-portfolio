@@ -11,7 +11,7 @@ function Skill({ skill }: Props) {
 	return (
 		<div className='group relative flex cursor-pointer'>
 			<div
-				className='rounded-full bg-card object-cover md:w-[6.5em] md:h-[6.5em] w-[5em] h-[5em] transition-transform
+				className='rounded-full dark:bg-card bg-cardLight object-cover md:w-[6.5em] md:h-[6.5em] w-[5em] h-[5em] transition-transform
 				duration-300 ease-in-out flex justify-center items-center'
 			>
 				<Image
