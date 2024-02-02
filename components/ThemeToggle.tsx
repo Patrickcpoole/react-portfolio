@@ -1,32 +1,19 @@
 // components/ThemeToggle.tsx
 import { useEffect, useState } from 'react';
+import { useTheme } from '../context/ThemeContext';
 import { IoMoon } from "react-icons/io5";
 import { IoSunnySharp } from "react-icons/io5";
 
 
 const ThemeToggle: React.FC = () => {
-  const [theme, setTheme] = useState<string>('light');
-
-
-  const toggleTheme = (): void => {
-    const newTheme = theme === 'dark' ? 'light' : 'dark';
-
-    // Toggle theme class on the document
-    document.documentElement.classList.toggle('dark', newTheme === 'dark');
-
-    // Save theme preference to local storage
-    localStorage.setItem('theme', newTheme);
-
-    // Update state
-    setTheme(newTheme);
-  };
+  const { theme, toggleTheme } = useTheme();
 
   console.log('theme in theme toggle', theme);
 
   return (
     <div
       className={`relative w-16 h-8 rounded-full bg-gray-300 dark:bg-gray-700 p-1 cursor-pointer ${
-        theme === 'dark' ? 'bg-green-400' : 'bg-[#fae9b2] '
+        theme === 'dark' ? 'bg-gray-700' : 'bg-[#fae9b2] '
       }`}
       onClick={toggleTheme}
     >
