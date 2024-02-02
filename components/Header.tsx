@@ -1,4 +1,5 @@
 import React, { useEffect, useState} from 'react';
+import { useTheme } from '../context/ThemeContext';
 import { FaGithub, FaLinkedin, FaEnvelope, FaFile } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -6,8 +7,8 @@ import { Social } from '../typings';
 import ThemeToggle from './ThemeToggle';
 type Props = { socials: Social[] };
 function Header({ socials }: Props) {
-	const [theme, setTheme] = useState<string>('light');
 
+const {theme} = useTheme();
 
 	return (
 		<header className='sticky top-[1%] p-5 flex items-center justify-between max-w-7xl mx-auto z-50 md:w-screen '>
