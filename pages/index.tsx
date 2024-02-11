@@ -25,6 +25,8 @@ type Props = {
   socials: Social[];
 }
 
+// 2/10/2024
+
 const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials }) => {
  
   return (
