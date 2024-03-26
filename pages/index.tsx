@@ -34,8 +34,12 @@ const Home: React.FC<Props> = ({ pageInfo, experience, skills, projects, socials
     snap-y snap-mandatory overscroll-contain overflow-y-scroll overflow-x-hidden scroll-smooth z-0 
     md:scrollbar md:scrollbar-thumb-[#169137]/80 md:scrollbar-track-cardLight dark:md:scrollbar-track-card">
       <Head>
-        <title>Patricks portfolio</title>
-
+        <title>Patrick Poole - Full Stack Developer Portfolio</title>
+        <meta property="og:title" content="Patrick Poole - Full Stack Developer Portfolio" />
+        <meta property="og:description" content="My name is Patrick Poole and I'm a Full Stack Web Developer from Colorado." />
+        <meta property="og:image" content="https://amplify-venu20-dev-131644-deployment.s3.amazonaws.com/profile-2.jpg" />
+        <meta property="og:url" content="https://www.patrickcpoole.com/" />
+        <meta property="og:type" content="website" />
       </Head>
 
   

@@ -23,10 +23,10 @@ function Skill({ skill }: Props) {
 				/>
 				<div
 					className='absolute opacity-0 group-hover:opacity-80 transition duration-300
-			ease-in-out group-hover:bg-text w-[5em] h-[5em] md:w-24 md:h-24 xl:w-[6.5em] xl:h-[6.5em] rounded-full z-0'
+			ease-in-out group-hover:bg-text  w-[5em] h-[5em] md:w-24 md:h-24 xl:w-[6.5em] xl:h-[6.5em] rounded-full z-0'
 				>
 					<div className='flex items-center justify-center h-full text-center'>
-						<p className='text-sm font-bold text-opacity-100 text-primary p-5'>
+						<p className='text-sm font-bold text-opacity-100 text-primaryDark p-5'>
 							{skill.title}
 						</p>
 					</div>
