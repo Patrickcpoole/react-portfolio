@@ -6,6 +6,8 @@ import Link from 'next/link';
 import { Social } from '../typings';
 import ThemeToggle from './ThemeToggle';
 type Props = { socials: Social[] };
+
+// pushing to master
 function Header({ socials }: Props) {
 
 const {theme} = useTheme();
