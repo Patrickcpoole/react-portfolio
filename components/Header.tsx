@@ -52,7 +52,7 @@ const {theme} = useTheme();
 				className='flex items-center flex-nowrap text-heading cursor-pointer '
 			>
 			{theme === 'dark' ? <a
-					href='https://amplify-venu20-dev-131644-deployment.s3.amazonaws.com/Patrick+Poole+Dark+Resume+.pdf'
+					href='https://amplify-venu20-dev-131644-deployment.s3.amazonaws.com/Patrick+C+Poole+Dark+Resume'
 					target='_blank'
 					rel='noopener noreferrer'
 					className='w-auto flex md:mr-4 group'
@@ -67,7 +67,7 @@ const {theme} = useTheme();
 					</p>
 				</a> :
 				<a
-				href='https://amplify-venu20-dev-131644-deployment.s3.amazonaws.com/Patrick+Poole+Resume.pdf'
+				href='https://amplify-venu20-dev-131644-deployment.s3.amazonaws.com/Patrick+C+Poole+Resume'
 				target='_blank'
 				rel='noopener noreferrer'
 				className='w-auto flex md:mr-4 group'
