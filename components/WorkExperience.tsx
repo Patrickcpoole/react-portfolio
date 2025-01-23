@@ -2,7 +2,6 @@ import React, { useRef, useState, useCallback, useEffect } from "react";
 import { motion } from "framer-motion";
 import ExperienceCard from "./ExperienceCard";
 import { Experience } from "../typings";
-import { MdArrowBack, MdArrowForward } from "react-icons/md";
 
 type Props = {
   experience: Experience[];
@@ -111,44 +110,29 @@ function WorkExperience({ experience }: Props) {
   return (
     <div
       ref={experienceRef}
-      className="relative w-screen flex min-h-screen flex-col text-left max-w-full justify-start mx-auto items-center z-0"
+      className="relative w-screen flex  flex-col text-left max-w-full justify-start mx-auto items-center z-0 "
     >
       <h3 className="section-heading">Experience</h3>
-      <div className="flex items-center justify-center overflow-hidden relative w-full ">
-        <div
-          ref={scrollContainerRef}
-          className="flex flex-col w-full  md:flex-start items-center md:flex  md:flex-row md:relative  md:w-[95%] md:snap-x md:snap-mandatory md:overflow-hidden  md:hide-scrollbar"
-        >
-          {orderedExperience.map((job, index) => (
-            <div
+
+      <div
+        ref={scrollContainerRef}
+        className="flex flex-col w-full  md:flex-start items-center md:flex  md:flex-row md:relative  md:w-[95%] md:snap-x md:snap-mandatory md:overflow-hidden  md:hide-scrollbar"
+      >
+        {orderedExperience.map((job, index) => (
+          <div
+            key={job._id}
+            className="snap-center snap-always flex-shrink-0 w-11/12 md:h-screen md:w-full overflow-x-hidden flex flex-row 
+									justify-center items-start  transition-transform duration-300 ease-in-out mx-10 "
+          >
+            <ExperienceCard
               key={job._id}
-              className="snap-center snap-always flex-shrink-0 w-11/12 pb-8 
-          overflow-x-hidden flex flex-row  justify-center items-center  transition-transform duration-300 ease-in-out"
-            >
-              <div className="h-[80%] flex justify-center items-center md:w-[150px] w-[0px]">
-                {experienceIndex > 0 && (
-                  <button
-                    onClick={() => scroll("left")}
-                    className="hidden md:flex justify-center items-center hover:text-accent text-heading animate-pulse mx-2"
-                  >
-                    <MdArrowBack size="4em" />
-                  </button>
-                )}
-              </div>
-              <ExperienceCard key={job._id} job={job} />
-              <div className="h-[80%] flex justify-center items-center md:w-[150px] w-[0px]">
-                {experienceIndex < experience.length - 1 && (
-                  <button
-                    onClick={() => scroll("right")}
-                    className="hidden md:flex  justify-center  items-center hover:text-accent text-heading animate-pulse mx-2"
-                  >
-                    <MdArrowForward size="4em" />
-                  </button>
-                )}
-              </div>
-            </div>
-          ))}
-        </div>
+              job={job}
+              scroll={scroll}
+              experienceIndex={experienceIndex}
+              experienceLength={experience.length}
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
