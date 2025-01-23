@@ -61,7 +61,7 @@ function Skills({ directionLeft, skills }: Props) {
       : "md:grid md:grid-cols-6 flex justify-center flex-wrap gap-5";
 
   return (
-    <motion.div className="flex flex-col text-center md:text-left min-h-screen justify-start  mx-auto items-center">
+    <motion.div className="flex flex-col text-center md:text-left lg:min-h-screen justify-start  mx-4 items-center">
       <h3 className="section-heading">Skills</h3>
       <h5 className="hidden md:block section-sub-heading">
         Hover over button for skill name. Click a filter button to show specific
@@ -71,7 +71,7 @@ function Skills({ directionLeft, skills }: Props) {
         Tap skill button for skill name. Tap a filter button to show specific
         skills.
       </h5>
-      <div className="md:hidden flex flex-wrap my-8 justify-center md:flex-nowrap">
+      <div className="lg:hidden flex flex-wrap my-8 justify-center lg:flex-nowrap">
         {filterButtons.map((button, index) => (
           <button
             key={index}
@@ -91,7 +91,7 @@ function Skills({ directionLeft, skills }: Props) {
           </button>
         ))}
       </div>
-      <div className="hidden md:flex flex-wrap my-4 justify-center md:flex-nowrap">
+      <div className="hidden lg:flex flex-wrap my-4 justify-center lg:flex-nowrap">
         {filterButtons.map((button, index) => (
           <button
             key={index}

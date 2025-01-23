@@ -6,11 +6,11 @@
   /* Mobile styles */
 
   .section-heading {
-    @apply relative uppercase pl-3 tracking-[0.5em] md:tracking-[0.75em] text-heading text-2xl mx-auto mt-[15%] md:mt-[6%];
+    @apply relative uppercase pl-3 tracking-[0.5em] md:tracking-[0.75em] text-heading text-3xl md:text-2xl mx-auto mt-[15%] md:mt-[6%];
   }
 
   .section-sub-heading {
-    @apply relative my-4 uppercase pl-3 text-heading text-xs md:text-sm text-center mb-4 mx-auto tracking-[0.25em];
+    @apply relative my-4 uppercase px-3 text-heading text-xs md:text-sm text-center mb-4 mx-auto tracking-[0.25em];
   }
 
   .projectButton {
