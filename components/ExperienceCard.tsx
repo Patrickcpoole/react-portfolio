@@ -23,6 +23,24 @@ function ExperienceCard({
   const orderedTechnologies = job.technologies.sort(
     (a, b) => a.order - b.order
   );
+
+  const renderCustomStyles = (company: string) => {
+    switch (company) {
+      case "WageUp":
+        return { maxWidth: "200px", maxHeight: "100px" };
+      case "FareHarbor":
+        return {
+          width: "125px",
+          height: "100px",
+        };
+      default:
+        return {
+          width: "100px",
+          height: "100px",
+        };
+    }
+  };
+
   return (
     <>
       <div className="h-[80%] flex justify-center items-center md:w-[150px] w-[0px]">
@@ -45,14 +63,7 @@ function ExperienceCard({
             viewport={{ once: true }}
             className="object-cover object-center cursor-pointer my-5"
             src={urlFor(job?.companyImage).url()}
-            style={
-              job.company === "WageUp"
-                ? { maxWidth: "200px", maxHeight: "100px" }
-                : {
-                    width: "100px",
-                    height: "100px",
-                  }
-            }
+            style={renderCustomStyles(job.company)}
             alt="work experience image"
           />
           <div className="px-0 md:px-2">
