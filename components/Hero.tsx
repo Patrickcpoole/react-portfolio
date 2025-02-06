@@ -33,24 +33,24 @@ function Hero({ pageInfo }: Props) {
 
         <div className="grid grid-rows-3 grid-cols-1 md:flex md:flex-wrap md:justify-center md:items-center md:mt-5 mt-24 w-fullrelative">
           <Link href="#about">
-            <button className="row-start-1 mx-4 border-[#169137]/40 dark:border-[#169137]/40 bg-[#169137]/40 px-6 py-2 border z-50 bg-white rounded-full uppercase text-xs tracking-widest transition-all dark:hover:border-[#169137]/40 hover:border-[#169137] hover:text-[#FFF] dark:hover:bg-[#169137]/40 hover:bg-[#169137] mt-2 md:mt-0">
+            <button className="row-start-1 mx-4 border-[#169137]/40 dark:border-[#169137]/40 dark:bg-transparent bg-[#169137]/40 px-6 py-2 border z-50 bg-white rounded-full uppercase text-xs tracking-widest transition-all dark:hover:border-[#169137]/40 hover:border-[#169137] hover:text-[#FFF] dark:hover:bg-[#169137]/40 hover:bg-[#169137] mt-2 md:mt-0">
               About
             </button>
           </Link>
           <div>
             <Link href="#experience">
-              <button className="row-start-2 md:mx-4  border-[#169137]/40 dark:border-[#169137]/40 bg-[#169137]/40 px-6 py-2 border z-50 bg-white rounded-full uppercase text-xs tracking-widest transition-all dark:hover:border-[#169137]/40 hover:border-[#169137] hover:text-[#FFF] dark:hover:bg-[#169137]/40 hover:bg-[#169137] mt-2 md:mt-0">
+              <button className="row-start-2 md:mx-4  border-[#169137]/40 dark:border-[#169137]/40 dark:bg-transparent bg-[#169137]/40 px-6 py-2 border z-50 bg-white rounded-full uppercase text-xs tracking-widest transition-all dark:hover:border-[#169137]/40 hover:border-[#169137] hover:text-[#FFF] dark:hover:bg-[#169137]/40 hover:bg-[#169137] mt-2 md:mt-0">
                 Experience
               </button>
             </Link>
             <Link href="#projects">
-              <button className="row-start-2 mx-4 border-[#169137]/40 dark:border-[#169137]/40 bg-[#169137]/40 px-6 py-2 border z-50 bg-white rounded-full uppercase text-xs tracking-widest transition-all dark:hover:border-[#169137]/40 hover:border-[#169137] hover:text-[#FFF] dark:hover:bg-[#169137]/40 hover:bg-[#169137] mt-2 md:mt-0">
+              <button className="row-start-2 mx-4 border-[#169137]/40 dark:border-[#169137]/40 dark:bg-transparent bg-[#169137]/40 px-6 py-2 border z-50 bg-white rounded-full uppercase text-xs tracking-widest transition-all dark:hover:border-[#169137]/40 hover:border-[#169137] hover:text-[#FFF] dark:hover:bg-[#169137]/40 hover:bg-[#169137] mt-2 md:mt-0">
                 Projects
               </button>
             </Link>
           </div>
           <Link href="#skills">
-            <button className="row-start-3 mx-4 border-[#169137]/40 dark:border-[#169137]/40 bg-[#169137]/40 px-6 py-2 border z-50 bg-white rounded-full uppercase text-xs tracking-widest transition-all dark:hover:border-[#169137]/40 hover:border-[#169137] hover:text-[#FFF] dark:hover:bg-[#169137]/40 hover:bg-[#169137] mt-2 md:mt-0">
+            <button className="row-start-3 mx-4 border-[#169137]/40 dark:border-[#169137]/40 dark:bg-transparent bg-[#169137]/40 px-6 py-2 border z-50 bg-white rounded-full uppercase text-xs tracking-widest transition-all dark:hover:border-[#169137]/40 hover:border-[#169137] hover:text-[#FFF] dark:hover:bg-[#169137]/40 hover:bg-[#169137] mt-2 md:mt-0">
               Skills
             </button>
           </Link>
