@@ -32,6 +32,7 @@ function About({ pageInfo }: Props) {
           }}
           viewport={{ once: true }}
           src={urlFor(pageInfo?.aboutImage).url()}
+          alt="about image"
           className="flex-shrink-0 w-56 my-5 h-56 rounded-md object-cover md:rounder-lg md:w-64 md:h-64
       xl:w-[400px] xl:h-[400px] text-heading"
         />
