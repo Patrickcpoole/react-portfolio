@@ -43,6 +43,10 @@ const Home: React.FC<Props> = ({
       <Head>
         <title>Patrick Poole - Full Stack Developer Portfolio</title>
         <meta
+          name="description"
+          content="Patrick Poole - Full Stack Developer specializing in React, Next.js, and modern web technologies. View my portfolio, projects, and professional experience."
+        />
+        <meta
           property="og:title"
           content="Patrick Poole - Full Stack Developer Portfolio"
         />
@@ -56,6 +60,7 @@ const Home: React.FC<Props> = ({
         />
         <meta property="og:url" content="https://www.patrickcpoole.com/" />
         <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Patrick Poole Portfolio" />
       </Head>
 
       <Header socials={socials} />
