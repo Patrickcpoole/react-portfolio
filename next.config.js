@@ -2,9 +2,13 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-  images: {
-    domains: ['cdn.sanity.io'], // Add your domain(s) here
+  i18n: {
+    locales: ["en"],
+    defaultLocale: "en",
   },
-}
+  images: {
+    domains: ["cdn.sanity.io"], // Add your domain(s) here
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
