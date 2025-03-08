@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 type Props = {
@@ -8,9 +9,12 @@ type Props = {
 function BackgroundCircles({ profilePicture }: Props) {
   return (
     <div className="relative inset-0 flex justify-center items-center z-0">
-      <img
+      <Image
         className="rounded-full h-32 w-32 object-cover z-10"
         src={profilePicture}
+        alt="profile picture"
+        width={128}
+        height={128}
       />
       <motion.div
         initial={{ opacity: 0 }}

@@ -27,6 +27,8 @@ function Header({ socials }: Props) {
             target="_blank"
             rel="noopener noreferrer"
             className="mx-1"
+            aria-label={`Visit ${social.title} profile`}
+            title={`Visit ${social.title} profile`}
           >
             {social.title === "Github" ? (
               <FaGithub
