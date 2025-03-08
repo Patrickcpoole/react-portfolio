@@ -59,46 +59,51 @@ const Home: React.FC<Props> = ({
       </Head>
 
       <Header socials={socials} />
+      <main>
+        <section id="hero" data-testid="hero" className="snap-start">
+          <Hero pageInfo={pageInfo} />
+        </section>
 
-      <section id="hero" data-testid="hero" className="snap-start">
-        <Hero pageInfo={pageInfo} />
-      </section>
+        <section
+          id="about"
+          data-testid="about"
+          className="snap-center md:pb-0 "
+        >
+          <About pageInfo={pageInfo} />
+        </section>
 
-      <section id="about" data-testid="about" className="snap-center md:pb-0 ">
-        <About pageInfo={pageInfo} />
-      </section>
+        <section
+          id="experience"
+          data-testid="experience"
+          className="snap-start md:snap-always  pt-8 xl:pt-0 md:pb-[5dvh] lg:pb-0"
+        >
+          <WorkExperience experience={experience} />
+        </section>
 
-      <section
-        id="experience"
-        data-testid="experience"
-        className="snap-start md:snap-always  pt-8 xl:pt-0 md:pb-[5dvh] lg:pb-0"
-      >
-        <WorkExperience experience={experience} />
-      </section>
+        <section
+          id="projects"
+          data-testid="projects"
+          className="snap-start  pt-[5dvh] md:pt-0 pb-[5dvh] lg:pb-0"
+        >
+          <Projects projects={projects} />
+        </section>
 
-      <section
-        id="projects"
-        data-testid="projects"
-        className="snap-start  pt-[5dvh] md:pt-0 pb-[5dvh] lg:pb-0"
-      >
-        <Projects projects={projects} />
-      </section>
+        <section
+          id="skills"
+          data-testid="skills"
+          className="snap-start pt-8 xl:pt-0 pb-[5dvh] md:pb-[10dvh] lg:pb-0"
+        >
+          <Skills skills={skills} />
+        </section>
 
-      <section
-        id="skills"
-        data-testid="skills"
-        className="snap-start pt-8 xl:pt-0 pb-[5dvh] md:pb-[10dvh] lg:pb-0"
-      >
-        <Skills skills={skills} />
-      </section>
-
-      <section
-        id="contact"
-        data-testid="contact"
-        className="snap-start pb-[10dvh] pt-[5dvh] md:pt-0 md:pb-0"
-      >
-        <Contact pageInfo={pageInfo} />
-      </section>
+        <section
+          id="contact"
+          data-testid="contact"
+          className="snap-start pb-[10dvh] pt-[5dvh] md:pt-0 md:pb-0"
+        >
+          <Contact pageInfo={pageInfo} />
+        </section>
+      </main>
       <Link href="#hero" legacyBehavior>
         <footer className="hidden sticky md:block bottom-5 w-full cursor-pointer">
           <div className="flex items-center justify-center">
@@ -121,10 +126,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   const experience: Experience[] = await fetchExperiences();
   const projects: Project[] = await fetchProjects();
   const socials: Social[] = await fetchSocials();
-  console.log("this is page info", pageInfo);
-  console.log("this is skills", skills);
-  console.log("this is projects", projects);
-  console.log("this is socials", socials);
+
   return {
     props: {
       pageInfo,
@@ -134,9 +136,6 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
       socials,
     },
 
-    // Next.js will attempt to re-generate the page:
-    // When a request comes in
-    // At most once every 10 seconds
     revalidate: 10,
   };
 };
