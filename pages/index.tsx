@@ -1,5 +1,6 @@
 import { GetStaticProps } from "next";
 import { useEffect } from "react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import Head from "next/head";
 import Link from "next/link";
 import About from "../components/About";
